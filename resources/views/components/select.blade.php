@@ -1,7 +1,7 @@
 <div class="">
-    <select required {{ $area->count() < 1 ? 'disabled' : '' }}
+    <select {{ $required ? 'required' : '' }} {{ $area->count() < 1 ? 'disabled' : '' }}
         class="w-full border cursor-pointer text-sm border-slate-300 p-2 rounded focus:border-blue-700 focus:outline-blue-700 {{ $area->count() < 1 ? 'bg-gray-200/70 cursor-not-allowed' : '' }}"
-        wire:model.live="selected{{ $model }}" name="selected{{ $model }}">
+        wire:model.live="selected{{ $model }}" name="{{ Str::slug($name . $title) }}">
         <option value="">Pilih {{ $title }}</option>
 
         @forelse ($area as $item)

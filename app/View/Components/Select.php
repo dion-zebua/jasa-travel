@@ -22,6 +22,7 @@ class Select extends Component
         public string $model,
         public bool $required = false,
         public int $whereId = 0,
+        public ?string $name = NULL,
     ) {
 
         switch ($model) {

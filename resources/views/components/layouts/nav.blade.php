@@ -1,5 +1,5 @@
 @php
-    $menu = ['Beranda', 'Rute Travel', 'Tentang Kami'];
+    $menu = ['Beranda', 'Arsip Travel', 'Tentang Kami'];
 @endphp
 
 <ul class="flex flex-col md:!flex-row gap-x-10 gap-y-4 font-medium">
