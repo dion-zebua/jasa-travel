@@ -1,14 +1,13 @@
 <div class="">
-    <select {{ $area->count() < 1 ? 'disabled' : '' }} {{ $required ? 'required' : '' }}
-        class="w-full border cursor-pointer text-sm border-slate-300 p-2 rounded focus:outline-blue-700">
-        <option value="" disabled></option>
-        <option value="" disabled selected>Pilih {{ $title }}</option>
+    <select required {{ $area->count() < 1 ? 'disabled' : '' }}
+        class="w-full border cursor-pointer text-sm border-slate-300 p-2 rounded focus:border-blue-700 focus:outline-blue-700 {{ $area->count() < 1 ? 'bg-gray-200/70 cursor-not-allowed' : '' }}"
+        wire:model.live="selected{{ $model }}" name="selected{{ $model }}">
+        <option value="">Pilih {{ $title }}</option>
 
         @forelse ($area as $item)
-            <option value="{{ $item->id }}">{{ Str::title($item->name) }} {{$area->count()}}</option>
+            <option value={{ $item->code }}>{{ Str::title($item->name) }}</option>
         @empty
             <option value="" disabled>Tidak Ada Data</option>
         @endforelse
-        <option value="" disabled></option>
     </select>
 </div>

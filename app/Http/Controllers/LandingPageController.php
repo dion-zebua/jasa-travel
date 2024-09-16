@@ -13,4 +13,8 @@ class LandingPageController extends Controller
             'desc' => 'Beranda',
         ]);
     }
+    public function cariRute()
+    {
+        return 'asa';
+    }
 }

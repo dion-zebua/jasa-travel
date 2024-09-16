@@ -18,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingPageController::class, 'beranda'])
     ->name('beranda');
-Route::get('/a', [LandingPageController::class, 'beranda'])
+Route::get('/rute-travel', [LandingPageController::class, 'beranda'])
     ->name('rute-travel');
-Route::get('/b', [LandingPageController::class, 'beranda'])
+Route::get('/tentang-kami', [LandingPageController::class, 'beranda'])
     ->name('tentang-kami');
+Route::post('/travel/{asal}/{asalId}/{tujuan}/{tujuanId}', [LandingPageController::class, 'cariRute'])
+    ->name('cari-rute');

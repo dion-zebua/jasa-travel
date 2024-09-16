@@ -10,26 +10,24 @@
     </div>
     <div class="w-full !z-[2]">
         <div class="container mx-auto flex justify-center items-center">
-            <div
+            <form method="POST"
+                action={{ route('cari-rute', [
+                    'asal' => 'Depok',
+                    'asalId' => 7,
+                    'tujuan' => 'Depok',
+                    'tujuanId' => 7,
+                ]) }}
                 class="w-full max-w-[400px] sm:max-w-[550px] border border-gray-300 px-4 py-5 md:p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg">
+                @method('POST')
+                @csrf
                 <div class="grid grid-cols-2 gap-x-5 gap-y-3 [&_p]:text-sm [&_p]:text-slate-600 [&_p]:font-semibold">
-                    <div class="col-span-1 flex flex-col gap-y-3">
-                        <p>Asal :</p>
-                        <x-select title="Provinsi" model="Province" required />
-                        <x-select title="Kota/kab" model="City" />
-                        <x-select title="Kecamatan" model="District" />
-                    </div>
-                    <div class="col-span-1 flex flex-col gap-y-3">
-                        <p>Tujuan :</p>
-                        <x-select title="Provinsi" model="Province" required />
-                        <x-select title="Kota/kab" model="City" />
-                        <x-select title="Kecamatan" model="District" />
-                    </div>
+                    @livewire('select-area', ['label' => 'Asal'])
+                    @livewire('select-area', ['label' => 'Tujuan'])
                 </div>
                 <div class="[&>*]:w-full [&_span]:mx-auto">
-                    <x-button text="Cari Rute" class="relative z-[1]" :transparant="false" />
+                    <x-button text="Cari Rute" :submit="true" class="relative z-[1]" :transparant="false" />
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>

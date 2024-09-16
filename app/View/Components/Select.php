@@ -23,6 +23,7 @@ class Select extends Component
         public bool $required = false,
         public int $whereId = 0,
     ) {
+
         switch ($model) {
             case 'Province':
                 $this->area = Province::orderBy('name', 'asc')->get();
