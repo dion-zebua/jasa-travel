@@ -6,7 +6,7 @@
     @foreach ($menu as $item)
         <li>
             <a href="{{ route(Str::slug($item)) }}"
-                class="{{ Str::slug($item) == Route::currentRouteName() ? '!text-blue-700' : '' }} hover:text-blue-700 ">{{ $item }}</a>
+                class="whitespace-nowrap {{ Str::slug($item) == Route::currentRouteName() ? '!text-blue-700' : '' }} hover:text-blue-700 ">{{ $item }}</a>
         </li>
     @endforeach
 </ul>

@@ -15,7 +15,7 @@
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                 </div>
-                <div class="fixed inset-0 bg-black/80 p-7 hidden" id="mobile-menu-list">
+                <div class="fixed inset-0 bg-black/80 p-5 hidden" id="mobile-menu-list">
                     <svg xmlns="http://www.w3.org/2000/svg" id="mobile-menu-hidden" fill="none" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor"
                         class="size-6 ms-auto cursor-pointer bg-slate-950/50 mb-1 stroke-slate-300 hover:scale-95 rounded ">
