@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GenerateImageController;
 use App\Http\Controllers\LandingPageController;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\App;

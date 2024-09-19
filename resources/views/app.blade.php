@@ -44,6 +44,8 @@
 
     @yield('content')
 
+    <x-alert />
+
     @vite('resources/js/app.js')
     @livewireScripts
 
