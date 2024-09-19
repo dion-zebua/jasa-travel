@@ -10,12 +10,14 @@ export default {
   theme: {
     extend: {
       animation: {
-        alert: 'alert 1s ease-in-out infinite',
+        alert: 'alert 6s ease-in-out',
       },
       keyframes: {
         alert: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
+          '0%': { transform: 'translateY(50px)' },
+          '10%': { transform: 'translateY(0px)' },
+          '90%': { transform: 'translateY(0px)' },
+          '100%': { transform: 'translateY(50px)' },
         }
       },
       fontFamily: {

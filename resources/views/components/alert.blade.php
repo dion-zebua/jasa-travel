@@ -1,5 +1,6 @@
 @if ($errors->any())
-    <div class="animate-alert bg-white pt-2 pr-2 shadow-2xl z-[99] border-l-8 border-l-blue-700 fixed bottom-5 right-5" id="alert">
+    <div class="animate-alert bg-white pt-2 pr-2 shadow-2xl z-[99] border-l-8 border-l-blue-700 fixed bottom-5 right-5"
+        id="alert">
         <div class="relative">
             <button id="closeAlert" class="absolute right-0 top-0">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -25,6 +26,9 @@
             closeAlert.addEventListener('click', e => {
                 alert.classList.add('!hidden')
             })
+            setInterval(() => {
+                alert.classList.add('!hidden')
+            }, 6000);
         }
     </script>
 @endif

@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\GenerateImageController;
 use App\Http\Controllers\LandingPageController;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\App;
@@ -16,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/q', function () {
+    return redirect()->route('beranda')->withErrors([
+        'error' => 'Test Aja',
+    ]);
+});
 
 Route::get('/', [LandingPageController::class, 'beranda'])
     ->name('beranda');
