@@ -6,7 +6,8 @@
         "build": "vite build",
         "add": "git add .",
         "commit": "git commit -m \"malas\"",
-        "push": "git push -u origin main"
+        "push": "git push -u origin main",
+        "malas" : "git add . && git commit -m \"malas\" && git push -u origin main"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.20",
