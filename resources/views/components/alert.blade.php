@@ -12,23 +12,23 @@
             <div class="text-[13px] p-4 pr-6">
                 <ul>
                     @foreach ($errors->all() as $item)
-                        <li>{{ $item }}</li>
+                        <li class="list-decimal ml-2">{{ $item }}</li>
                     @endforeach
                 </ul>
             </div>
         </div>
     </div>
     <script>
-        const alert = document.querySelector('#alert')
-        const closeAlert = document.querySelector('#closeAlert')
+        // const alert = document.querySelector('#alert')
+        // const closeAlert = document.querySelector('#closeAlert')
 
-        if (alert && closeAlert) {
-            closeAlert.addEventListener('click', e => {
-                alert.classList.add('!hidden')
-            })
-            setInterval(() => {
-                alert.classList.add('!hidden')
-            }, 6000);
-        }
+        // if (alert && closeAlert) {
+        //     closeAlert.addEventListener('click', e => {
+        //         alert.classList.add('!hidden')
+        //     })
+        //     setInterval(() => {
+        //         alert.classList.add('!hidden')
+        //     }, 6000);
+        // }
     </script>
 @endif

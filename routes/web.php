@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/q', function () {
     return redirect()->route('beranda')->withErrors([
         'error' => 'Test Aja',
+        'errorr' => 'Test Aja',
     ]);
 });
 
