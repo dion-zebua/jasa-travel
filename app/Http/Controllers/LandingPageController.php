@@ -20,27 +20,27 @@ class LandingPageController extends Controller
     public function cariRute(Request $request)
     {
         $validation = $request->validate([
-            "asalprovinsi" => "required|integer",
-            "asalkotakab" => "nullable|integer",
-            "asalkecamatan" => "nullable|integer",
+            "asal_provinsi" => "required|integer|exists:indonesia_provinces,code",
+            "asal_kotakab" => "nullable|integer|exists:indonesia_cities,code",
+            "asal_kecamatan" => "nullable|integer|exists:indonesia_districts,code",
 
-            "tujuanprovinsi" => "required|integer",
-            "tujuankotakab" => "nullable|integer",
-            "tujuankecamatan" => "nullable|integer",
+            "tujuan_provinsi" => "required|integer|exists:indonesia_provinces,code",
+            "tujuan_kotakab" => "nullable|integer|exists:indonesia_cities,code",
+            "tujuan_kecamatan" => "nullable|integer|exists:indonesia_districts,code",
         ]);
 
         $dataRes = [
-            Str::slug(District::where('code', $request->asalkecamatan)->first()->name ??
-                City::where('code', $request->asalkotakab)->first()->name ??
-                Province::where('code', $request->asalprovinsi)->first()->name) ?? NULL,
+            Str::slug(District::where('code', $request->asal_kecamatan)->first()?->name ??
+                City::where('code', $request->asal_kotakab)->first()?->name ??
+                Province::where('code', $request->asal_provinsi)->first()?->name) ?? NULL,
 
-            Str::slug(District::where('code', $request->tujuankecamatan)->first()->name ??
-                City::where('code', $request->tujuankotakab)->first()->name ??
-                Province::where('code', $request->tujuanprovinsi)->first()->name) ?? NULL,
+            Str::slug(District::where('code', $request->tujuan_kecamatan)->first()?->name ??
+                City::where('code', $request->tujuan_kotakab)->first()?->name ??
+                Province::where('code', $request->tujuan_provinsi)->first()?->name) ?? NULL,
 
-            $request->asalkecamatan ?? $request->asalkotakab ?? $request->asalprovinsi ?? 0,
+            $request->asal_kecamatan ?? $request->asal_kotakab ?? $request->asal_provinsi ?? 0,
 
-            $request->tujuankecamatan ?? $request->tujuankotakab ?? $request->tujuanprovinsi ?? 0,
+            $request->tujuan_kecamatan ?? $request->tujuan_kotakab ?? $request->tujuan_provinsi ?? 0,
         ];
 
         return redirect()->route('jalur-rute-travel', $dataRes);
