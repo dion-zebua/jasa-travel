@@ -50,7 +50,7 @@ class LandingPageController extends Controller
     {
         if ($asalId == $tujuanId) {
             return back()->withErrors([
-                'error' => 'Rute Travel Tidak Ditemukan!',
+                'error' => 'Rute travel tidak ditemukan!',
             ]);
         }
         $asalRes = $this->checkCode($asalId);
@@ -58,7 +58,7 @@ class LandingPageController extends Controller
 
         if (Str::slug($asalRes->name) != $asal || Str::slug($tujuanRes->name) != $tujuan) {
             return back()->withErrors([
-                'error' => 'Rute Travel Tidak Ditemukan!',
+                'error' => 'Rute travel tidak ditemukan!',
             ]);
         }
         return [$asalRes, $tujuanRes];
