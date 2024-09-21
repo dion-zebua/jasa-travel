@@ -49,19 +49,24 @@ class LandingPageController extends Controller
     public function jalurRuteTravel($asal, $tujuan, $asalId, $tujuanId)
     {
         if ($asalId == $tujuanId) {
-            abort(404);
+            return back()->withErrors([
+                'error' => 'Rute Travel Tidak Ditemukan!',
+            ]);
         }
         $asalRes = $this->checkCode($asalId);
         $tujuanRes = $this->checkCode($tujuanId);
 
         if (Str::slug($asalRes->name) != $asal || Str::slug($tujuanRes->name) != $tujuan) {
-            abort(404);
+            return back()->withErrors([
+                'error' => 'Rute Travel Tidak Ditemukan!',
+            ]);
         }
         return [$asalRes, $tujuanRes];
     }
 
     public function agenTravel($asal, $asalId)
     {
+
         $asalRes = $this->checkCode($asalId);
 
         return $asalRes;
