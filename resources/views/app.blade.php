@@ -3,7 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,
+        body {
+            touch-action: manipulation;
+            overflow-x: hidden;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     {{--  --}}
 
@@ -45,9 +52,17 @@
     @yield('content')
 
     <x-alert />
+    <x-layouts.footer />
+
 
     @vite('resources/js/app.js')
     @livewireScripts
+    <script>
+        window.addEventListener('resize', () => {
+            const zoomLevel = window.devicePixelRatio;
+            console.log(`Zoom Level: ${zoomLevel}%`);
+        });
+    </script>
 
 </body>
 
