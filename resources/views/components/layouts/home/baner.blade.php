@@ -1,10 +1,10 @@
 <div
     class="w-full !mx-0 grid place-items-center bg-gradient-to-tl from-blue-900 via-blue-700 to-blue-600 from-10% via-80% to-95% py-20 relative">
-    <div class="top-0 left-0 w-full opacity-[0.045] !bg-fixed h-full absolute !z-[2] !bg-[length:80px_80px]"
+    <div class="top-0 left-0 w-full opacity-[0.04] !bg-fixed h-full absolute !z-[2] !bg-[length:80px_80px]"
         style="background: url({{ asset('img/bg-baner.png') }}) ">
     </div>
     <div class="text-center z-[3] px-2">
-        <h1 class="!text-white mb-2">{{ config('app.name') . ' Murah' }}</h1>
+        <h1 class="!text-white mb-2">{{ config('app.name') . ' Murah ' . date('Y') }}</h1>
         <p class="text-slate-300 mb-7 max-w-[450px]">Temukan kenyamanan dan kemudahan perjalanan dengan layanan
             travel
             reguler kami!</p>

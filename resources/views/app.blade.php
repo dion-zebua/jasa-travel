@@ -46,7 +46,7 @@
 
 </head>
 
-<body class="font-poppins bg-slate-50 text-slate-600">
+<body class="font-poppins bg-slate-100 text-slate-600">
     <x-layouts.header />
 
     @yield('content')
