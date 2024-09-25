@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\ThumbnailController;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
@@ -16,12 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/q', function () {
-    return redirect()->route('beranda')->withErrors([
-        'error' => 'Test Aja',
-        'errorr' => 'Test Aja',
-    ]);
-});
+Route::get('/{text}/{width}/{height}', [ThumbnailController::class , 'generateThumbnail']);
 
 Route::get('/', [LandingPageController::class, 'beranda'])
     ->name('beranda');
