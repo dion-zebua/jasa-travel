@@ -9,13 +9,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "claviska/simpleimage": "^4.2",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "laravolt/indonesia": "^0.35.0",
-        "livewire/livewire": "^3.5",
-        "pbmedia/laravel-ffmpeg": "^8.5"
+        "livewire/livewire": "^3.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

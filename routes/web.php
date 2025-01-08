@@ -17,7 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{text}/{width}/{height}', [ThumbnailController::class, 'generateThumbnail']);
+Route::get(
+    '/image/{text}.jpg',
+    [ThumbnailController::class, 'generateThumbnail']
+)->name('thumbnail');
 
 
 Route::controller(LandingPageController::class)->group(function () {
