@@ -17,24 +17,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{text}/{width}/{height}', [ThumbnailController::class , 'generateThumbnail']);
+Route::get('/{text}/{width}/{height}', [ThumbnailController::class, 'generateThumbnail']);
 
-Route::get('/', [LandingPageController::class, 'beranda'])
-    ->name('beranda');
 
-Route::get('/arsip-travel', [LandingPageController::class, 'beranda'])
-    ->name('arsip-travel');
+Route::controller(LandingPageController::class)->group(function () {
 
-Route::get('/tentang-kami', [LandingPageController::class, 'beranda'])
-    ->name('tentang-kami');
+    Route::get('/', 'beranda')->name('beranda');
 
-Route::post('/', [LandingPageController::class, 'cariRute'])
-    ->name('cari-rute');
+    Route::get('/arsip-travel', 'beranda')->name('arsip-travel');
 
-Route::get('/rute-travel/dari-{asal}/ke-{tujuan}/{asalId}/{tujuanId}', [
-    LandingPageController::class,
-    'jalurRuteTravel'
-])->name('jalur-rute-travel');
+    Route::get('/tentang-kami', 'beranda')->name('tentang-kami');
 
-Route::get('/agen-travel-{asal}/{asalId}', [LandingPageController::class, 'agenTravel'])
-    ->name('agen-travel');
+    Route::post('/', 'cariRute')->name('cari-rute');
+
+    Route::get('/rute-travel/dari-{asal}/ke-{tujuan}/{asalId}/{tujuanId}', 'jalurRuteTravel')->name('jalur-rute-travel');
+
+    Route::get('/agen-travel-{asal}/{asalId}', 'agenTravel')->name('agen-travel');
+});
