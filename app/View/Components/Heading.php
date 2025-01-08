@@ -12,10 +12,11 @@ class Heading extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public string $title, 
+        public string $title,
         public string $desc1,
-        public string $desc2)
-    {
+        public string $desc2,
+        public ?bool $light = false,
+    ) {
         //
     }
 
