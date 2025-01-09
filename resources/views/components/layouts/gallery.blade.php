@@ -1,25 +1,25 @@
 <div class="py-24 __container">
-    {{-- <div class="mx-auto max-w-2xl lg:text-center">
-        <h2 class="text-base font-semibold leading-7 text-blue-600">Galeri Travel</h2>
-        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Abadikan Momen Perjalanan Anda</p>
-        <p class="mt-6 text-gray-600">
-            Galeri ini menampilkan berbagai unit, foto, dan momen berharga
-            yang merefleksikan perjalanan kami.</p>
-    </div> --}}
     <x-heading title="Galeri Travel" desc1="Abadikan Momen Perjalanan Anda"
         desc2="Galeri ini menampilkan berbagai unit, foto, dan momen berharga yang merefleksikan perjalanan kami." />
     <div
-        class="grid grid-cols-12 sm:gap-x-6 gap-y-8 mt-10 [&>*]:overflow-hidden [&>img]:cursor-pointer [&>img]:w-full [&>img]:object-cover [&>img]:rounded-xl [&>img]:shadow-lg [&>img]:h-72 [&>img]:transition-all [&>img]:duration-700 [&>img]:brightness-50 hover:[&>img]:brightness-90 [&>img]:col-span-full [&>img]:border-8 [&>img]:border-blue-600">
-        <img width="100" height="100" src="{{ asset('img/gallery/image1.png') }}" class="sm:!col-span-8" alt="galeri 1">
-        <img width="100" height="100" src="{{ asset('img/gallery/image2.png') }}" class="sm:!col-span-4"
-            alt="galeri 2">
-        <img width="100" height="100" src="{{ asset('img/gallery/image3.png') }}" class="sm:!col-span-4"
-            alt="galeri 3">
-        <img width="100" height="100" src="{{ asset('img/gallery/image4.png') }}" class="sm:!col-span-8"
-            alt="galeri 4">
-        <img width="100" height="100" src="{{ asset('img/gallery/image5.png') }}" class="sm:!col-span-6"
-            alt="galeri 5">
-        <img width="100" height="100" src="{{ asset('img/gallery/image6.png') }}" class="sm:!col-span-6"
-            alt="galeri 6">
+        class="max-w-2xl !mx-auto grid grid-cols-12 sm:gap-x-6 gap-y-8 mt-10 [&>*]:overflow-hidden [&>div]:cursor-pointer [&>div]:w-full [&>div]:rounded-2xl [&>div]:shadow-lg [&>div]:h-72 [&>div]:col-span-full [&>div]:border-8 [&>div]:border-blue-600 [&_img]:w-full [&_img]:h-full [&_img]:object-cover [&_img]:rounded-lg [&_img]:transition-all [&_img]:duration-700 [&_img]:brightness-50 hover:[&_img]:brightness-75">
+        <div class="sm:!col-span-8">
+            <img width="100" height="100" src="{{ asset('img/gallery/image1.png') }}" alt="galeri 1">
+        </div>
+        <div class="sm:!col-span-4">
+            <img width="100" height="100" src="{{ asset('img/gallery/image2.png') }}" alt="galeri 2">
+        </div>
+        <div class="sm:!col-span-6">
+            <img width="100" height="100" src="{{ asset('img/gallery/image5.png') }}" alt="galeri 5">
+        </div>
+        <div class="sm:!col-span-6">
+            <img width="100" height="100" src="{{ asset('img/gallery/image6.png') }}" alt="galeri 6">
+        </div>
+        <div class="sm:!col-span-4">
+            <img width="100" height="100" src="{{ asset('img/gallery/image3.png') }}" alt="galeri 3">
+        </div>
+        <div class="sm:!col-span-8">
+            <img width="100" height="100" src="{{ asset('img/gallery/image4.png') }}" alt="galeri 4">
+        </div>
     </div>
 </div>

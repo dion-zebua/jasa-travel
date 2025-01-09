@@ -16,6 +16,7 @@ class Heading extends Component
         public string $desc1,
         public string $desc2,
         public ?bool $light = false,
+        public ?bool $full = false,
     ) {
         //
     }

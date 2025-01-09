@@ -12,9 +12,12 @@ class LandingPageController extends Controller
 {
     public function beranda()
     {
+        $data = Province::all();
+        // dd($data);
         return view('pages.home', [
             'title' => 'Beranda',
             'desc' => 'Beranda',
+            // 'featured' => 
         ]);
     }
     public function cariRute(Request $request)
