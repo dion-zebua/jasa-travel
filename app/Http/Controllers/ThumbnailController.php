@@ -10,13 +10,17 @@ class ThumbnailController extends Controller
 {
     public static function generateThumbnail($text)
     {
+        $lines = $text;
         $image = new SimpleImage('img/bg-thumbnail.jpg');
         $image->resize(1600, 900);
-        $wrappedText = wordwrap($text, 25, "\n");
-        $lines = explode("\n", $wrappedText);
+
+        if (!is_array($text)) {
+            $wrappedText = wordwrap($text, 20, "\n");
+            $lines = explode("\n", $wrappedText);
+        }
 
         foreach ($lines as $key => $item) {
-            $yOffset = -300 + ($key * 130);
+            $yOffset = -350 + ($key * 120);
             $image->text($item, [
                 'color' => 'white',
                 'size' => 100,

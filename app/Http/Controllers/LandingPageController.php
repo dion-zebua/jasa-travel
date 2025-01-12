@@ -13,12 +13,37 @@ class LandingPageController extends Controller
 {
     public function beranda()
     {
-        $data = Province::all();
-        // dd($data);
+        $province = Province::whereIn("code", [15, 18, 31, 51])->get();
+        $city = City::whereIn("code", [3273, 3303, 3578, 5171])->get();
+        $data = [
+            $province[1],
+            $province[0],
+            $province[2],
+            $province[1],
+            $province[2],
+            $province[3],
+            $province[2],
+            $city[2],
+            $city[0],
+            $province[2],
+            $province[2],
+            $city[1],
+            $province[3],
+            $city[2],
+            $city[0],
+            $city[2],
+            $province[2],
+            $province[0],
+            $province[2],
+            $city[3],
+            $city[3],
+            $city[2],
+        ];
+
         return view('pages.home', [
             'title' => 'Beranda',
             'desc' => 'Beranda',
-            // 'featured' => 
+            'featured' => array_chunk($data, 2),
         ]);
     }
     public function cariRute(Request $request)
@@ -66,7 +91,7 @@ class LandingPageController extends Controller
             ]);
         }
         if (Route::currentRouteName() === 'thumbnail-jalur-rute-travel') {
-            return ThumbnailController::generateThumbnail("TRAVEL " . $asalRes->name . " - " . $tujuanRes->name);
+            return ThumbnailController::generateThumbnail(["TRAVEL", $asalRes->name, $tujuanRes->name]);
         }
 
         return [$asalRes, $tujuanRes];
@@ -78,7 +103,7 @@ class LandingPageController extends Controller
         $asalRes = $this->checkCode($asalId);
 
         if (Route::currentRouteName() === 'thumbnail-jalur-rute-travel') {
-            return ThumbnailController::generateThumbnail("AGEN TRAVEL " . $asalRes->name);
+            return ThumbnailController::generateThumbnail(["AGEN TRAVEL", $asalRes->name]);
         }
 
         return $asalRes;
