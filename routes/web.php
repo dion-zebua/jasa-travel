@@ -33,6 +33,10 @@ Route::controller(LandingPageController::class)->group(function () {
         Route::get('/thumbnail.jpg', 'jalurRuteTravel')->name('thumbnail-jalur-rute-travel');
     });
 
+    Route::prefix('/agen-travel-{asal}/{asalId}')->group(function () {
+        Route::get('/', 'agenTravel')->name('agen-travel');
+        Route::get('/thumbnail.jpg', 'agenTravel')->name('thumbnail-agen-travel');
+    });
 
-    Route::get('/agen-travel-{asal}/{asalId}', 'agenTravel')->name('agen-travel');
+
 });

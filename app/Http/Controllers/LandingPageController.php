@@ -66,7 +66,7 @@ class LandingPageController extends Controller
             ]);
         }
         if (Route::currentRouteName() === 'thumbnail-jalur-rute-travel') {
-            return ThumbnailController::generateThumbnail("TRAVEL " . $asalRes->name . " " . $tujuanRes->name);
+            return ThumbnailController::generateThumbnail("TRAVEL " . $asalRes->name . " - " . $tujuanRes->name);
         }
 
         return [$asalRes, $tujuanRes];
@@ -76,6 +76,10 @@ class LandingPageController extends Controller
     {
 
         $asalRes = $this->checkCode($asalId);
+
+        if (Route::currentRouteName() === 'thumbnail-jalur-rute-travel') {
+            return ThumbnailController::generateThumbnail("AGEN TRAVEL " . $asalRes->name);
+        }
 
         return $asalRes;
     }
