@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Response;
 
 class ThumbnailController extends Controller
 {
-    public function generateThumbnail($text)
+    public static function generateThumbnail($text)
     {
         $image = new SimpleImage('img/bg-thumbnail.jpg');
         $image->resize(1600, 900);

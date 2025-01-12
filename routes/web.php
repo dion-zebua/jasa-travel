@@ -17,12 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get(
-    '/image/{text}.jpg',
-    [ThumbnailController::class, 'generateThumbnail']
-)->name('thumbnail');
-
-
 Route::controller(LandingPageController::class)->group(function () {
 
     Route::get('/', 'beranda')->name('beranda');
@@ -33,7 +27,12 @@ Route::controller(LandingPageController::class)->group(function () {
 
     Route::post('/', 'cariRute')->name('cari-rute');
 
-    Route::get('/rute-travel/dari-{asal}/ke-{tujuan}/{asalId}/{tujuanId}', 'jalurRuteTravel')->name('jalur-rute-travel');
+    Route::prefix('/rute-travel/dari-{asal}/ke-{tujuan}/{asalId}/{tujuanId}')->group(function () {
+
+        Route::get('/', 'jalurRuteTravel')->name('jalur-rute-travel');
+        Route::get('/thumbnail.jpg', 'jalurRuteTravel')->name('thumbnail-jalur-rute-travel');
+    });
+
 
     Route::get('/agen-travel-{asal}/{asalId}', 'agenTravel')->name('agen-travel');
 });

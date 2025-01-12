@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 use Laravolt\Indonesia\Models\City;
 use Laravolt\Indonesia\Models\District;
 use Laravolt\Indonesia\Models\Province;
@@ -64,6 +65,10 @@ class LandingPageController extends Controller
                 'error' => 'Rute travel tidak ditemukan!',
             ]);
         }
+        if (Route::currentRouteName() === 'thumbnail-jalur-rute-travel') {
+            return ThumbnailController::generateThumbnail("TRAVEL " . $asalRes->name . " " . $tujuanRes->name);
+        }
+
         return [$asalRes, $tujuanRes];
     }
 
