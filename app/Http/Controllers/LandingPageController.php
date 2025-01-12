@@ -15,7 +15,7 @@ class LandingPageController extends Controller
     {
         $province = Province::whereIn("code", [15, 18, 31, 51])->get();
         $city = City::whereIn("code", [3273, 3303, 3578, 5171])->get();
-        $data = [
+        $featured = [
             $province[1],
             $province[0],
             $province[2],
@@ -38,12 +38,16 @@ class LandingPageController extends Controller
             $city[3],
             $city[3],
             $city[2],
+            $province[1],
+            $city[2],
         ];
+        $agent = $province->merge($city);
 
         return view('pages.home', [
             'title' => 'Beranda',
             'desc' => 'Beranda',
-            'featured' => array_chunk($data, 2),
+            'featured' => array_chunk($featured, 2),
+            'agent' => $agent,
         ]);
     }
     public function cariRute(Request $request)

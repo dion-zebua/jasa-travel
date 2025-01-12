@@ -57,12 +57,6 @@
 
     @vite('resources/js/app.js')
     @livewireScripts
-    <script>
-        window.addEventListener('resize', () => {
-            const zoomLevel = window.devicePixelRatio;
-            console.log(`Zoom Level: ${zoomLevel}%`);
-        });
-    </script>
 
 </body>
 
