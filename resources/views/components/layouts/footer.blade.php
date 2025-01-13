@@ -1,4 +1,4 @@
-<footer>
+<footer class="bg-gradient-to-bl from-blue-500 to-blue-700">
     <div class="fixed bottom-5 right-5 z-[9]">
         <div class="relative hover:rotate-6 hover:transition-all hover:scale-105">
 
@@ -20,5 +20,16 @@
             </a>
         </div>
     </div>
-    <div class=""></div>
+
+
+
+    <div class="__container py-20 text-slate-300">
+        <div class="grid grid-cols-7 gap-x-5 gap-y-7">
+            <div class="col-span-3">
+                <x-logo />
+            </div>
+            <div class="col-span-2"></div>
+            <div class="col-span-2"></div>
+        </div>
+    </div>
 </footer>

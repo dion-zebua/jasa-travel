@@ -1,9 +1,7 @@
 <div class="bg-white __container py-3 md:py-5 border-b z-10 relative">
     <div class="grid grid-cols-12 gap-5">
         <div class="col-span-4">
-            <a href="{{ route('beranda') }}" class="block w-28 md:w-32">
-                <img class="w-full h-auto" src="{{ asset('img/travel.png') }}" alt="Logo {{ config('app.name') }}">
-            </a>
+            <x-logo />
         </div>
         <div class="col-span-8 flex justify-end items-center">
             <div class="md:hidden">

@@ -22,6 +22,7 @@ Route::controller(LandingPageController::class)->group(function () {
     Route::get('/', 'beranda')->name('beranda');
 
     Route::get('/arsip-travel', 'beranda')->name('arsip-travel');
+    Route::get('/arsip-agent', 'beranda')->name('arsip-agent');
 
     Route::get('/tentang-kami', 'beranda')->name('tentang-kami');
 
@@ -37,6 +38,4 @@ Route::controller(LandingPageController::class)->group(function () {
         Route::get('/', 'agenTravel')->name('agen-travel');
         Route::get('/thumbnail.jpg', 'agenTravel')->name('thumbnail-agen-travel');
     });
-
-
 });

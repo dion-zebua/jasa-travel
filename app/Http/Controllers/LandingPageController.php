@@ -106,7 +106,7 @@ class LandingPageController extends Controller
 
         $asalRes = $this->checkCode($asalId);
 
-        if (Route::currentRouteName() === 'thumbnail-jalur-rute-travel') {
+        if (Route::currentRouteName() === 'thumbnail-agen-travel') {
             return ThumbnailController::generateThumbnail(["AGEN TRAVEL", $asalRes->name]);
         }
 
