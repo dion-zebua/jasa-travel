@@ -1,5 +1,5 @@
 <footer class="bg-gradient-to-bl from-blue-500 to-blue-700">
-    <div class="fixed bottom-5 right-5 z-[100]">
+    <div class="fixed bottom-5 right-5 z-[99]" id="whatsapp-button">
         <div class="relative hover:rotate-6 hover:transition-all hover:scale-105">
 
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-14" viewBox="0 0 40 40">

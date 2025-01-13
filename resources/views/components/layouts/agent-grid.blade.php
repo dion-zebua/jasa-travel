@@ -5,14 +5,14 @@
             <a title="Agent Travel {{ $item->name }}"
                 src="{{ route('thumbnail-agen-travel', ['asal' => Str::slug($item->name), 'asalId' => $item->code]) }}"
                 href="{{ route('agen-travel', ['asal' => Str::slug($item->name), 'asalId' => $item->code]) }}"
-                class="absolute inset-0 z-[99]"></a>
-            <img loading="lazy" title="Agent Travel {{ $item->name }}"
+                class="absolute inset-0 z-[2]"></a>
+            <img width="160" height="90" loading="lazy" title="Agent Travel {{ $item->name }}"
                 src="{{ route('thumbnail-agen-travel', ['asal' => Str::slug($item->name), 'asalId' => $item->code]) }}"
-                class="group-hover:scale-125 w-full object-cover absolute inset-0 scale-100 transition-all duration-500"
+                class="group-hover:scale-125 w-full h-auto object-cover absolute inset-0 scale-100 transition-all duration-500"
                 alt="Surabaya" />
-            <div class="z-10 aspect-[16/12] relative p-5 text-center flex-col flex justify-end h-full">
+            <div class="z-[2] aspect-[16/12] relative p-5 text-center flex-col flex justify-end h-full">
                 <a title="Agent Travel {{ $item->name }}" href="{{ whatsapp() }}" target="_blank"
-                    class="col-span-full px-5 py-2 border-2 border-red-600 hover:border-red-500 bg-red-600 hover:bg-red-500 text-slate-200 rounded-lg transition-all relative">
+                    class="z-10 col-span-full px-5 py-2 border-2 border-red-600 hover:border-red-500 bg-red-600 hover:bg-red-500 text-slate-200 rounded-lg transition-all relative">
                     Pesan Sekarang
                 </a>
             </div>

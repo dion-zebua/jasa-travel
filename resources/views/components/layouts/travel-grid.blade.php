@@ -7,9 +7,9 @@
                 <a title="TRAVEL {{ $item[0]['name'] }} - {{ $item[1]['name'] }}"
                     href="{{ route('jalur-rute-travel', ['asal' => Str::slug($item[0]['name']), 'tujuan' => Str::slug($item[1]['name']), 'asalId' => $item[0]['code'], 'tujuanId' => $item[1]['code']]) }}"
                     class="overflow-hidden w-full h-auto block">
-                    <img loading="lazy" title="TRAVEL {{ $item[0]['name'] }} - {{ $item[1]['name'] }}" loading="lazy"
+                    <img width="160" height="90" loading="lazy" title="TRAVEL {{ $item[0]['name'] }} - {{ $item[1]['name'] }}" loading="lazy"
                         src="{{ route('thumbnail-jalur-rute-travel', ['asal' => Str::slug($item[0]['name']), 'tujuan' => Str::slug($item[1]['name']), 'asalId' => $item[0]['code'], 'tujuanId' => $item[1]['code']]) }}"
-                        class="border-4 border-b-0 rounded-lg rounded-b-none hover:scale-110 transition-all duration-300"
+                        class="border-4 w-full h-auto aspect-video border-b-0 rounded-lg rounded-b-none hover:scale-110 transition-all duration-300"
                         alt="Travel">
                 </a>
                 <a title="PESAN TRAVEL {{ $item[0]['name'] }} - {{ $item[1]['name'] }}" href="{{ whatsapp() }}"
