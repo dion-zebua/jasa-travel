@@ -1,5 +1,5 @@
 <footer class="bg-gradient-to-bl from-blue-500 to-blue-700">
-    <div class="fixed bottom-5 right-5 z-[9]">
+    <div class="fixed bottom-5 right-5 z-[100]">
         <div class="relative hover:rotate-6 hover:transition-all hover:scale-105">
 
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-14" viewBox="0 0 40 40">
@@ -23,15 +23,30 @@
 
 
 
-    <div class="__container py-20 text-slate-300">
-        <div class="grid grid-cols-7 gap-x-5 gap-y-7">
-            <div class="col-span-3">
+    <div class="__container pt-20 text-slate-300">
+        <div class="grid grid-cols-8 gap-x-5 gap-y-7">
+            <div class="col-span-12 md:col-span-4">
                 <x-logo :light="true" />
-                <p class="max-w-80 mt-3">Kami menyediakan layanan perjalanan yang aman dan nyaman, dengan berbagai pilihan paket wisata dan
+                <p class="max-w-80 mt-3">Kami menyediakan layanan perjalanan yang aman dan nyaman, dengan berbagai
+                    pilihan paket wisata dan
                     destinasi terbaik.</p>
             </div>
-            <div class="col-span-2"></div>
-            <div class="col-span-2"></div>
+            <div class="col-span-4 sm:col-span-2">
+                <h3 class="text-white font-bold tracking-wider">Laman</h3>
+                <ul class="flex flex-col gap-y-2 font-medium hover:[&_a]:!text-slate-50 [&_a.active]:!text-slate-50">
+                    <x-nav />
+                </ul>
+            </div>
+            <div class="col-span-4 sm:col-span-2">
+                <h3 class="text-white font-bold tracking-wider">Kontak</h3>
+                <ul class="flex flex-col gap-y-2 font-medium hover:[&_a]:!text-slate-50 [&_a.active]:!text-slate-50">
+                    <x-kontak />
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center py-5 mt-10 text-sm border-t border-blue-400">
+            Dikembangkan oleh <a class="underline" target="_blank" rel="nofollow noindex" href="https://dionzebua.com">dionzebua.com</a>
         </div>
     </div>
 </footer>

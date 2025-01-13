@@ -1,0 +1,15 @@
+@php
+    $menu = [
+        ['Beranda'], 
+        ['Travel', route('arsip-travel')], 
+        ['Agen', route('arsip-agen')], 
+        ['Developer', 'https://dionzebua.com']];
+
+@endphp
+
+@foreach ($menu as $key => $item)
+    <li>
+        <a href="{{ $item[1] ?? route(Str::slug($item[0])) }}"
+            class="whitespace-nowrap {{ Str::slug($item[0]) == Route::currentRouteName() ? '!text-blue-700 active' : '' }} hover:text-blue-700 ">{{ $item[0] }}</a>
+    </li>
+@endforeach

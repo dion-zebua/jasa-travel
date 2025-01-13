@@ -7,12 +7,13 @@
                 <a title="TRAVEL {{ $item[0]['name'] }} - {{ $item[1]['name'] }}"
                     href="{{ route('jalur-rute-travel', ['asal' => Str::slug($item[0]['name']), 'tujuan' => Str::slug($item[1]['name']), 'asalId' => $item[0]['code'], 'tujuanId' => $item[1]['code']]) }}"
                     class="overflow-hidden w-full h-auto block">
-                    <img title="TRAVEL {{ $item[0]['name'] }} - {{ $item[1]['name'] }}" loading="lazy"
+                    <img loading="lazy" title="TRAVEL {{ $item[0]['name'] }} - {{ $item[1]['name'] }}" loading="lazy"
                         src="{{ route('thumbnail-jalur-rute-travel', ['asal' => Str::slug($item[0]['name']), 'tujuan' => Str::slug($item[1]['name']), 'asalId' => $item[0]['code'], 'tujuanId' => $item[1]['code']]) }}"
                         class="border-4 border-b-0 rounded-lg rounded-b-none hover:scale-110 transition-all duration-300"
                         alt="Travel">
                 </a>
-                <a title="PESAN TRAVEL {{ $item[0]['name'] }} - {{ $item[1]['name'] }}" href="{{ whatsapp() }}" target="__blank"
+                <a title="PESAN TRAVEL {{ $item[0]['name'] }} - {{ $item[1]['name'] }}" href="{{ whatsapp() }}"
+                    target="__blank"
                     class="bg-slate-800 hover:bg-blue-900 text-slate-300 px-5 py-2 text-sm line-clamp-2 !leading-5 text-center font-bold">Pesan
                     Travel</a>
             </div>

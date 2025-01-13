@@ -98,7 +98,11 @@ class LandingPageController extends Controller
             return ThumbnailController::generateThumbnail(["TRAVEL", $asalRes->name, $tujuanRes->name]);
         }
 
-        return [$asalRes, $tujuanRes];
+        // return view('pages.arsip-travel', [
+        //     'title' => 'Beranda',
+        //     'desc' => 'Beranda',
+        //     'travel' => [$asalRes, $tujuanRes],
+        // ]);
     }
 
     public function agenTravel($asal, $asalId)
@@ -125,4 +129,13 @@ class LandingPageController extends Controller
         }
         return $res;
     }
+
+    public function arsipTravel(){
+            return view('pages.arsip-travel', [
+            'title' => 'Beranda',
+            'desc' => 'Beranda',
+            'travel' => '',
+        ]);
+    }
 }
+

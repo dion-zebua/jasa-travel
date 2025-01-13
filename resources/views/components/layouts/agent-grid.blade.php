@@ -6,7 +6,7 @@
                 src="{{ route('thumbnail-agen-travel', ['asal' => Str::slug($item->name), 'asalId' => $item->code]) }}"
                 href="{{ route('agen-travel', ['asal' => Str::slug($item->name), 'asalId' => $item->code]) }}"
                 class="absolute inset-0 z-[99]"></a>
-            <img title="Agent Travel {{ $item->name }}"
+            <img loading="lazy" title="Agent Travel {{ $item->name }}"
                 src="{{ route('thumbnail-agen-travel', ['asal' => Str::slug($item->name), 'asalId' => $item->code]) }}"
                 class="group-hover:scale-125 w-full object-cover absolute inset-0 scale-100 transition-all duration-500"
                 alt="Surabaya" />

@@ -21,8 +21,8 @@ Route::controller(LandingPageController::class)->group(function () {
 
     Route::get('/', 'beranda')->name('beranda');
 
-    Route::get('/arsip-travel', 'beranda')->name('arsip-travel');
-    Route::get('/arsip-agent', 'beranda')->name('arsip-agent');
+    Route::get('/arsip-travel', 'arsipTravel')->name('arsip-travel');
+    Route::get('/arsip-agen', 'beranda')->name('arsip-agen');
 
     Route::get('/tentang-kami', 'beranda')->name('tentang-kami');
 

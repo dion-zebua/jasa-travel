@@ -12,7 +12,6 @@ class ThumbnailController extends Controller
     {
         $lines = $text;
         $image = new SimpleImage('img/bg-thumbnail.jpg');
-        $image->resize(1600, 900);
 
         if (!is_array($text)) {
             $wrappedText = wordwrap($text, 20, "\n");
@@ -28,7 +27,7 @@ class ThumbnailController extends Controller
                 'fontFile' => public_path('font/Poppins-Regular.ttf'),
             ]);
         }
-        $imageData = $image->toDataUri();
+        $imageData = $image->toDataUri('image/jpeg' , 15);
 
         return response()->make(file_get_contents($imageData), 200, [
             'Content-Type' => 'image/jpeg',
