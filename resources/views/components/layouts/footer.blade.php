@@ -26,7 +26,9 @@
     <div class="__container py-20 text-slate-300">
         <div class="grid grid-cols-7 gap-x-5 gap-y-7">
             <div class="col-span-3">
-                <x-logo />
+                <x-logo :light="true" />
+                <p class="max-w-80 mt-3">Kami menyediakan layanan perjalanan yang aman dan nyaman, dengan berbagai pilihan paket wisata dan
+                    destinasi terbaik.</p>
             </div>
             <div class="col-span-2"></div>
             <div class="col-span-2"></div>

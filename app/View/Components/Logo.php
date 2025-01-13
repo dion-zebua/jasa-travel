@@ -21,7 +21,6 @@ class Logo extends Component
      */
     public function render(): View|Closure|string
     {
-        return 'asas';
         return view('components.logo');
     }
 }
