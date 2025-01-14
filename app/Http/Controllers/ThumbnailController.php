@@ -27,7 +27,7 @@ class ThumbnailController extends Controller
                 'fontFile' => public_path('font/Poppins-Regular.ttf'),
             ]);
         }
-        $imageData = $image->toDataUri('image/jpeg' , 15);
+        $imageData = $image->toDataUri('image/jpeg', 15);
 
         return response()->make(file_get_contents($imageData), 200, [
             'Content-Type' => 'image/jpeg',

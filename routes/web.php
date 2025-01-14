@@ -17,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/image/{text}/thumbnail.jpg', function ($text) {
+    return ThumbnailController::generateThumbnail($text);
+})->name('thumbnail');
+
+
+
 Route::controller(LandingPageController::class)->group(function () {
 
     Route::get('/', 'beranda')->name('beranda');
