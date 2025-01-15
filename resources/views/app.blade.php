@@ -9,7 +9,16 @@
             touch-action: manipulation;
             overflow-x: hidden;
         }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('{{ asset('font/Poppins-Regular.ttf') }}') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
     </style>
+    @vite('resources/css/app.css')
+    @livewireStyles
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     {{--  --}}
@@ -32,17 +41,6 @@
     <meta property="og:site_name" content="{{ config('app.name') }}" />
     <link rel="canonical" href="{{ url()->full() }}" />
 
-    @vite('resources/css/app.css')
-    @livewireStyles
-
-    <style>
-        @font-face {
-            font-family: 'Poppins';
-            src: url('{{ asset('font/Poppins-Regular.ttf') }}') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
-    </style>
 
 </head>
 

@@ -93,9 +93,7 @@ class LandingPageController extends Controller
         $tujuanRes = $this->checkCode($tujuanId);
 
         if ((Str::slug($asalRes->name) != $asal || Str::slug($tujuanRes->name) != $tujuan) || $asalId == $tujuanId) {
-            return redirect(abort(404))->withErrors([
-                'error' => 'Rute travel tidak ditemukan!',
-            ]);
+            abort(404);
         }
 
         if (Route::currentRouteName() === 'thumbnail-jalur-rute-travel') {
