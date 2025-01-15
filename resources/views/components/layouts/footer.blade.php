@@ -27,17 +27,17 @@
         <div class="grid grid-cols-8 gap-x-5 gap-y-7">
             <div class="col-span-12 md:col-span-4">
                 <x-logo :light="true" />
-                <p class="max-w-80 mt-3">Kami menyediakan layanan perjalanan yang aman dan nyaman, dengan berbagai
+                <p class="max-w-[550px] md:max-w-80 mt-3">Kami menyediakan layanan perjalanan yang aman dan nyaman, dengan berbagai
                     pilihan paket wisata dan
                     destinasi terbaik.</p>
             </div>
-            <div class="col-span-4 sm:col-span-2">
+            <div class="col-span-8 sm:col-span-4 md:col-span-2">
                 <h3 class="text-white font-bold tracking-wider">Laman</h3>
                 <ul class="flex flex-col gap-y-2 font-medium hover:[&_a]:!text-slate-50 [&_a.active]:!text-slate-50">
                     <x-nav />
                 </ul>
             </div>
-            <div class="col-span-4 sm:col-span-2">
+            <div class="col-span-8 sm:col-span-4 md:col-span-2">
                 <h3 class="text-white font-bold tracking-wider">Kontak</h3>
                 <ul class="flex flex-col gap-y-2 font-medium hover:[&_a]:!text-slate-50 [&_a.active]:!text-slate-50">
                     <x-kontak />

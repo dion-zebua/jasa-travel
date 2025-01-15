@@ -11,6 +11,14 @@ use Laravolt\Indonesia\Models\Province;
 
 class LandingPageController extends Controller
 {
+
+    public int $year;
+
+    public function __construct()
+    {
+        $this->year = date('Y');
+    }
+
     public function beranda()
     {
         $province = Province::whereIn("code", [15, 18, 31, 51])->get();
@@ -44,8 +52,8 @@ class LandingPageController extends Controller
         $agent = $province->merge($city);
 
         return view('pages.home', [
-            'title' => 'Beranda',
-            'desc' => 'Beranda',
+            'title' => Str::title('Jasa Travel Terbaik No. 1 Seluruh Indonesia'),
+            'desc' => Str::title('Jasa travel terbaik No. 1 di Indonesia. Nikmati perjalanan aman dan nyaman ke berbagai destinasi favorit di seluruh Indonesia.'),
             'featured' => array_chunk($featured, 2),
             'agent' => $agent,
         ]);
@@ -94,15 +102,16 @@ class LandingPageController extends Controller
                 'error' => 'Rute travel tidak ditemukan!',
             ]);
         }
+
         if (Route::currentRouteName() === 'thumbnail-jalur-rute-travel') {
             return ThumbnailController::generateThumbnail(["TRAVEL", $asalRes->name, $tujuanRes->name]);
         }
 
-        // return view('pages.arsip-travel', [
-        //     'title' => 'Beranda',
-        //     'desc' => 'Beranda',
-        //     'travel' => [$asalRes, $tujuanRes],
-        // ]);
+        return view('pages.arsip-travel', [
+            'title' => Str::title("Travel $asalRes->name $tujuanRes->name Murah $this->year"),
+            'desc' => Str::title("Jasa Travel $asalRes->name $tujuanRes->name Terbaik No. 1 di $this->year dengan harga murah dan terjangkau"),
+            'travel' => [$asalRes, $tujuanRes],
+        ]);
     }
 
     public function agenTravel($asal, $asalId)
@@ -130,12 +139,12 @@ class LandingPageController extends Controller
         return $res;
     }
 
-    public function arsipTravel(){
-            return view('pages.arsip-travel', [
+    public function arsipTravel()
+    {
+        return view('pages.arsip-travel', [
             'title' => 'Beranda',
             'desc' => 'Beranda',
             'travel' => '',
         ]);
     }
 }
-

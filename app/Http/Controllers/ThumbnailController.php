@@ -19,15 +19,14 @@ class ThumbnailController extends Controller
         }
 
         foreach ($lines as $key => $item) {
-            $yOffset = -350 + ($key * 120);
             $image->text($item, [
                 'color' => 'white',
                 'size' => 100,
-                'yOffset' => $yOffset,
+                'yOffset' => -350 + ($key * 120),
                 'fontFile' => public_path('font/Poppins-Regular.ttf'),
             ]);
         }
-        $imageData = $image->toDataUri('image/jpeg', 15);
+        $imageData = $image->toDataUri(null, 15);
 
         return response()->make(file_get_contents($imageData), 200, [
             'Content-Type' => 'image/jpeg',
