@@ -1,4 +1,5 @@
 @extends('app')
 @section('content')
-    <x-layouts.baner-page />
+    <x-default-baner :title="$title" :desc="$desc" />
+    
 @endsection
