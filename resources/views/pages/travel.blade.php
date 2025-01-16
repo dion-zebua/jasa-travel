@@ -1,4 +1,4 @@
 @extends('app')
 @section('content')
-    aa
+    <x-layouts.baner-page />
 @endsection
