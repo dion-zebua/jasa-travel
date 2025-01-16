@@ -100,9 +100,11 @@ class LandingPageController extends Controller
             return ThumbnailController::generateThumbnail(["TRAVEL", $asalRes->name, $tujuanRes->name]);
         }
 
+        $page = Str::title("Travel $asalRes->name $tujuanRes->name");
         return view('pages.travel', [
-            'title' => Str::title("Travel $asalRes->name $tujuanRes->name Murah $this->year"),
-            'desc' => Str::title("Jasa Travel $asalRes->name $tujuanRes->name Terbaik No. 1 di $this->year dengan harga murah dan terjangkau"),
+            'page' => $page,
+            'title' => Str::title("$page Murah $this->year"),
+            'desc' => Str::title("Jasa $page Terbaik No. 1 di $this->year dengan harga murah dan terjangkau"),
             'travel' => [$asalRes, $tujuanRes],
         ]);
     }

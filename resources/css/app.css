@@ -11,6 +11,18 @@
         @apply bg-gradient-to-tl from-blue-900 via-blue-700 to-blue-600 from-10% via-80% to-95%;
     }
 
+    #content {
+        & h2, & h3, & h4 {
+            @apply mb-2
+        }
+        & p {
+            @apply mb-3;
+        }
+        & a {
+            @apply text-blue-600 underline;
+        }
+    }
+
     h1,
     h2,
     h3,
