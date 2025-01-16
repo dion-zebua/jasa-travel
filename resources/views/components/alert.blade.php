@@ -1,5 +1,5 @@
 @if ($errors->any())
-    <div class="animate-alert max-w-[min(80%,300px)] w-auto bg-gray-100 shadow-2xl z-[99] border-l-[10px] border-l-blue-700 fixed bottom-5 right-5"
+    <div class="animate-alert max-w-[min(80%,300px)] w-auto bg-gray-100 shadow-2xl z-[99] border-l-[10px] border-l-blue-700 fixed bottom-5 left-5"
         id="alert">
         <x-animate-expand />
 
