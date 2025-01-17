@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Laravolt\Indonesia\Models\City;
 use Laravolt\Indonesia\Models\District;
@@ -101,11 +102,19 @@ class LandingPageController extends Controller
         }
 
         $page = Str::title("Travel $asalRes->name $tujuanRes->name");
+
+        $province = Province::whereNotIn('code', [$asalId, $tujuanId])->limit(5)->inRandomOrder()->get();
+        $city = City::whereNotIn('code', [$asalId, $tujuanId])->limit(4)->inRandomOrder()->get();
+        $district = District::whereNotIn('code', [$asalId, $tujuanId])->limit(3)->inRandomOrder()->get();
+        $recommendation = $province->merge($city)->merge($district)->shuffle()->take(6);
+        $recommendation->splice(3, 0, [$asalRes]);
+
         return view('pages.travel', [
             'page' => $page,
             'title' => Str::title("$page Murah $this->year"),
             'desc' => Str::title("Jasa $page Terbaik No. 1 di $this->year dengan harga murah dan terjangkau"),
             'travel' => [$asalRes, $tujuanRes],
+            'recommendation' => $recommendation,
         ]);
     }
 
