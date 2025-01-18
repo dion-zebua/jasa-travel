@@ -112,7 +112,7 @@ class LandingPageController extends Controller
         return view('pages.travel', [
             'page' => $page,
             'title' => Str::title("$page Murah $this->year"),
-            'desc' => Str::title("Jasa $page Terbaik No. 1 di $this->year dengan harga murah dan terjangkau"),
+            'desc' => Str::title("Jasa $page PP Terbaik No. 1 di tahun $this->year dengan harga murah dan terjangkau"),
             'travel' => [$asalRes, $tujuanRes],
             'recommendation' => $recommendation,
         ]);

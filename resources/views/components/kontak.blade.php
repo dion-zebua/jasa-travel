@@ -1,7 +1,7 @@
 @php
     $menu = [
-        ['0882-8931-7870', whatsapp()],
-        ['info@dionzebua.com', 'mailto:info@dionzebua.com'],
+        [phone(), whatsapp()],
+        [email(), 'mailto:' . email()],
     ];
 
 @endphp

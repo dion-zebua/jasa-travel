@@ -3,7 +3,7 @@
         ['Beranda'], 
         ['Travel', route('arsip-travel')], 
         ['Agen', route('arsip-agen')], 
-        ['Developer', 'https://dionzebua.com']];
+        ['Developer', 'https://' . developer()]];
 
 @endphp
 

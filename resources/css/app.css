@@ -13,7 +13,11 @@
 
     #content {
         & h2 {
-            @apply mb-2
+            @apply my-2;
+        }
+        & h2,
+        & h3 {
+            @apply text-left;
         }
         & p {
             @apply mb-3;
@@ -23,6 +27,9 @@
         }
         & img {
             @apply rounded mb-5;
+        }
+        & ul {
+            @apply list-disc ms-6;
         }
     }
 

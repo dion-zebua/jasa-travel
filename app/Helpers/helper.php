@@ -1,5 +1,19 @@
 <?php
 
+if (! function_exists('developer')) {
+    function developer()
+    {
+        return 'dionzebua.com';
+    }
+}
+
+if (! function_exists('email')) {
+    function email()
+    {
+        return 'info@dionzebua.com';
+    }
+}
+
 if (! function_exists('phone')) {
     function phone()
     {

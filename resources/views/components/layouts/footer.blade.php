@@ -49,7 +49,7 @@
 
             <div class="text-center py-5 mt-10 text-sm border-t border-blue-400">
                 Dikembangkan oleh <a class="underline" target="_blank" rel="nofollow noindex"
-                    href="https://dionzebua.com">dionzebua.com</a>
+                    href="https://{{ developer() }}">{{ developer() }}</a>
             </div>
         </div>
     </x-background-blue>
