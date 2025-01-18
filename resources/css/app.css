@@ -29,7 +29,7 @@
             @apply rounded mb-5;
         }
         & ul {
-            @apply list-disc ms-6;
+            @apply list-disc ms-6 mb-4;
         }
     }
 

@@ -120,7 +120,20 @@
             <h2>Cara Pesan Travel</h2>
             <p>Pemesanan travel dijamin sangat mudah (anti ribet pokoknya). Anda tidak wajib datang ke garasi kami, bisa
                 dengan langsung memesan secara online. Pemesanan online dibuka 24 jam via kontak whatsapp pada nomor
-                {{ phone() }} 
+                {{ phone() }}. Pesan travel via online hanya melayani chat saja, jangan memanggil sembarangan.
+            </p>
+            <p>Untuk alur pemesanan travel online sebagai berikut:</p>
+            <ul>
+                <li>Pilih rute anda pada web kami,</li>
+                <li>Klik logo whatsapp untuk memulai chat,</li>
+                <li>Isi data penumpang seperti nama, jenis kelamin, alamat, tujuan, dan barang bawaan,</li>
+                <li>Negosiasi harga dengan admin,</li>
+                <li>Anda tinggal menunggu jadwal keberangkatan travel.</li>
+            </ul>
+            <p>Promo travel selalui tersedia setiap minggu. Kami memberikan diskon s/d 20% per orang. Berikut trik
+                mendapatkan promonya, pesan travel pada pagi hari sebelum jam 9, lalu ketika memesan jangan lupa bagikan
+                pesanan anda ke sosial media, setelah itu berikan bukti screenshoot kepada kami. Dengan begitu anda bisa
+                mengklaim diskon tersebut.
             </p>
         </section>
     </article>
