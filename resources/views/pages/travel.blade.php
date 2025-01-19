@@ -123,7 +123,7 @@
                 <li>Negosiasi harga dengan admin,</li>
                 <li>Anda tinggal menunggu jadwal keberangkatan travel.</li>
             </ul>
-            <p>Promo travel selalui tersedia setiap minggu. Kami memberikan diskon s/d 20% per orang. Berikut trik
+            <p>Promo travel selalu tersedia setiap minggu. Kami memberikan diskon s/d 20% per orang. Berikut trik
                 mendapatkan promonya, pesan travel pada pagi hari sebelum jam 9, lalu ketika memesan jangan lupa bagikan
                 pesanan anda ke sosial media, setelah itu berikan bukti screenshoot kepada kami. Dengan begitu anda bisa
                 mengklaim diskon tersebut.
@@ -162,6 +162,9 @@
                     </ul>
                 </li>
             </ul>
+            <p>
+                Setiap agen tersebut sudah berpengalaman pada rutenya. Tidak perlu khawatir dijamin aman dan selamat.
+            </p>
         </section>
     </article>
 @endsection
