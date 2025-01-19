@@ -105,13 +105,6 @@
                 <li>Tersedia carter drop dan carter pp,</li>
                 <li>Semua unit bersih dan memiliki AC,</li>
                 <li>Travel reguler 24 jam,</li>
-                <li>Menguasai seluruh daerah
-                    <a
-                        href="{{ route('agen-travel', ['asal' => Str::slug($travel[0]->name), 'asalId' => $travel[0]->code]) }}">{{ $travel[0]->name }}</a>
-                    dan
-                    <a
-                        href="{{ route('agen-travel', ['asal' => Str::slug($travel[1]->name), 'asalId' => $travel[1]->code]) }}">{{ $travel[1]->name }}</a>,
-                </li>
                 <li>Travel door to door dan pulang pergi,</li>
                 <li>Cepat karena Via tol,</li>
                 <li>Bonus makan dan minum.</li>
@@ -135,6 +128,40 @@
                 pesanan anda ke sosial media, setelah itu berikan bukti screenshoot kepada kami. Dengan begitu anda bisa
                 mengklaim diskon tersebut.
             </p>
+            {{-- H2 --}}
+            <h2>Rekomendasi Agen {{ $page }}</h2>
+            <p>
+                Apakah anda sedang mencari agen <a
+                    href="{{ route('agen-travel', ['asal' => Str::slug($travel[0]->name), 'asalId' => $travel[0]->code]) }}">
+                    {{ Str::title('Travel ' . $travel[0]->name) }}</a>
+                dan agen
+                <a
+                    href="{{ route('agen-travel', ['asal' => Str::slug($travel[1]->name), 'asalId' => $travel[1]->code]) }}">
+                    {{ Str::title('Travel ' . $travel[1]->name) }}</a> terbaik di Indonesia. Jangan khawatir! Kami akan
+                siap membantu anda mencari agen travel terpercaya. Siap mengantar anda dengan selamat.
+            </p>
+            <p>
+                Setiap agen yang kami rekomendasikan selalu amanah, kami jamin 100%. Berikut 8 rekomendasi agen travel
+                terpercaya:
+            </p>
+            <ul class="[&>li]:font-semibold [&>li>ul]:font-normal">
+                <li>{{ Str::title($travel[0]->name) }}
+                    <ul class="!list-decimal">
+                        <li>Pahala Pelita Travel</li>
+                        <li>Seraya Trans {{ Str::title($travel[0]->name) }}</li>
+                        <li>LNT Trans</li>
+                        <li>Agung Group Travel</li>
+                    </ul>
+                </li>
+                <li>{{ Str::title($travel[1]->name) }}
+                    <ul class="!list-decimal">
+                        <li>Ratu Abadi {{ Str::title($travel[1]->name) }}</li>
+                        <li>Safania Trans & Travel</li>
+                        <li>Buaya Darat Tour</li>
+                        <li>Galaxy Sejahtera</li>
+                    </ul>
+                </li>
+            </ul>
         </section>
     </article>
 @endsection
