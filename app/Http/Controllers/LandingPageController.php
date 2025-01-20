@@ -12,53 +12,58 @@ use Laravolt\Indonesia\Models\Province;
 
 class LandingPageController extends Controller
 {
-
-    public int $year;
+    public $province;
+    public $city;
+    public $featured;
+    public $agent;
 
     public function __construct()
     {
-        $this->year = date('Y');
+
+        $this->province = Province::whereIn("code", [15, 18, 31, 51])->get();
+        $this->city = City::whereIn("code", [3273, 3303, 3578, 5171])->get();
+        $this->featured = [
+            $this->province[1],
+            $this->province[0],
+            $this->province[2],
+            $this->province[1],
+            $this->province[2],
+            $this->province[3],
+            $this->province[2],
+            $this->city[2],
+            $this->city[0],
+            $this->province[2],
+            $this->province[2],
+            $this->city[1],
+            $this->province[3],
+            $this->city[2],
+            $this->city[0],
+            $this->city[2],
+            $this->province[2],
+            $this->province[0],
+            $this->province[2],
+            $this->city[3],
+            $this->city[3],
+            $this->city[2],
+            $this->province[1],
+            $this->city[2],
+        ];
+        $this->agent = $this->province->merge($this->city);
     }
+
 
     public function beranda()
     {
-        $province = Province::whereIn("code", [15, 18, 31, 51])->get();
-        $city = City::whereIn("code", [3273, 3303, 3578, 5171])->get();
-        $featured = [
-            $province[1],
-            $province[0],
-            $province[2],
-            $province[1],
-            $province[2],
-            $province[3],
-            $province[2],
-            $city[2],
-            $city[0],
-            $province[2],
-            $province[2],
-            $city[1],
-            $province[3],
-            $city[2],
-            $city[0],
-            $city[2],
-            $province[2],
-            $province[0],
-            $province[2],
-            $city[3],
-            $city[3],
-            $city[2],
-            $province[1],
-            $city[2],
-        ];
-        $agent = $province->merge($city);
 
         return view('pages.home', [
             'title' => Str::title('Jasa Travel Terbaik No. 1 Seluruh Indonesia'),
             'desc' => Str::title('Jasa travel terbaik No. 1 di Indonesia. Nikmati perjalanan aman dan nyaman ke berbagai destinasi favorit di seluruh Indonesia.'),
-            'featured' => array_chunk($featured, 2),
-            'agent' => $agent,
+            'featured' => array_chunk($this->featured, 2),
+            'agent' => $this->province->merge($this->city),
+
         ]);
     }
+
     public function cariRute(Request $request)
     {
         $validation = $request->validate([
@@ -111,8 +116,8 @@ class LandingPageController extends Controller
 
         return view('pages.travel', [
             'page' => $page,
-            'title' => Str::title("$page Murah $this->year"),
-            'desc' => Str::title("Jasa $page PP Terbaik No. 1 di tahun $this->year dengan harga murah dan terjangkau"),
+            'title' => Str::title("$page Murah " . date('Y')),
+            'desc' => Str::title("Jasa $page PP Terbaik No. 1 di tahun " . date('Y') . " dengan harga murah dan terjangkau"),
             'travel' => [$asalRes, $tujuanRes],
             'recommendation' => $recommendation,
             'thumbnail' => route('thumbnail-jalur-rute-travel', ['asal' => Str::slug($asalRes['name']), 'tujuan' => Str::slug($tujuanRes['name']), 'asalId' => $asalRes['code'], 'tujuanId' => $tujuanRes['code']]),
@@ -132,8 +137,8 @@ class LandingPageController extends Controller
 
         return view('pages.agen', [
             'page' => $page,
-            'title' => Str::title("8 $page Murah $this->year"),
-            'desc' => Str::title("8 Rekomendasi $page Profesional Terbaik No. 1 di tahun $this->year dengan harga murah"),
+            'title' => Str::title("8 $page Murah " . date('Y')),
+            'desc' => Str::title("8 Rekomendasi $page Profesional Terbaik No. 1 di tahun " . date('Y') . " dengan harga murah"),
             'agent' => $asalRes,
             // 'recommendation' => $recommendation,
             'thumbnail' => route('thumbnail-agen-travel', ['asal' => Str::slug($asalRes->name), 'asalId' => $asalRes->code]),
@@ -156,9 +161,19 @@ class LandingPageController extends Controller
     public function arsipTravel()
     {
         return view('pages.arsip-travel', [
-            'title' => 'Beranda',
-            'desc' => 'Beranda',
-            'travel' => '',
+            'title' => "Arsip Travel Termurah " . date('Y'),
+            'desc' => "Arsip Travel Termurah dan Terbaik No. 1 di Indonesia",
+            'featured' => array_chunk($this->featured, 2),
+        ]);
+    }
+
+    public function arsipAgen()
+    {
+        return view('pages.arsip-agen', [
+            'title' => "Arsip Agen Travel Termurah " . date('Y'),
+            'desc' => "Arsip Agen Travel Termurah dan Terbaik No. 1 di Indonesia",
+            'agent' => $this->province->merge($this->city),
+
         ]);
     }
 }

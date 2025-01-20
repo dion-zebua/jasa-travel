@@ -1,5 +1,4 @@
-<div
-    class="w-full !mx-0 grid place-items-center __gradient py-20 relative">
+<div class="w-full !mx-0 grid place-items-center __gradient py-20 relative">
     <div class="top-0 left-0 w-full opacity-[0.04] !bg-fixed h-full absolute !z-[2] !bg-[length:80px_80px]"
         style="background: url({{ asset('img/bg-baner.png') }}) ">
     </div>
@@ -11,7 +10,7 @@
     </div>
     <div class="w-full !z-[2] px-5">
         <div class="container mx-auto flex justify-center items-center">
-            <form method="POST" action={{ route('cari-rute') }}
+            {{-- <form method="POST" action={{ route('cari-rute') }}
                 class="w-full max-w-[400px] sm:max-w-[550px] border border-gray-300 px-4 py-5 md:p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg">
                 @method('POST')
                 @csrf
@@ -22,7 +21,8 @@
                 <div class="[&>*]:w-full [&_span]:mx-auto">
                     <x-button text="Cari Rute" :submit="true" class="relative z-[1]" :transparant="false" />
                 </div>
-            </form>
+            </form> --}}
+            <x-travel-search />
         </div>
     </div>
 </div>
