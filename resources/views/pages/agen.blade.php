@@ -5,8 +5,11 @@
         <section id="content" class="__container !max-w-[800px] text-justify !py-12">
             {{-- H2 --}}
             <h2>{{ $title }}</h2>
-            <img src="{{ route('thumbnail-agen-travel', ['asal' => Str::slug($agent->name), 'asalId' => $agent->code]) }}"
+            <img src="{{ $thumbnail }}"
                 alt="{{ $title }}">
+                <p>
+                    
+                </p>
         </section>
     </article>
 @endsection

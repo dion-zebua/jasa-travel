@@ -115,6 +115,7 @@ class LandingPageController extends Controller
             'desc' => Str::title("Jasa $page PP Terbaik No. 1 di tahun $this->year dengan harga murah dan terjangkau"),
             'travel' => [$asalRes, $tujuanRes],
             'recommendation' => $recommendation,
+            'thumbnail' => route('thumbnail-jalur-rute-travel', ['asal' => Str::slug($asalRes['name']), 'tujuan' => Str::slug($tujuanRes['name']), 'asalId' => $asalRes['code'], 'tujuanId' => $tujuanRes['code']]),
         ]);
     }
 
@@ -131,10 +132,11 @@ class LandingPageController extends Controller
 
         return view('pages.agen', [
             'page' => $page,
-            'title' => Str::title("$page Murah $this->year"),
-            'desc' => Str::title("$page Profesional Terbaik No. 1 di tahun $this->year dengan harga murah dan terjangkau"),
+            'title' => Str::title("8 $page Murah $this->year"),
+            'desc' => Str::title("8 Rekomendasi $page Profesional Terbaik No. 1 di tahun $this->year dengan harga murah"),
             'agent' => $asalRes,
             // 'recommendation' => $recommendation,
+            'thumbnail' => route('thumbnail-agen-travel', ['asal' => Str::slug($asalRes->name), 'asalId' => $asalRes->code]),
         ]);
     }
 

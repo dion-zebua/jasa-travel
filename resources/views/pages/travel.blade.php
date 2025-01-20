@@ -5,7 +5,7 @@
         <section id="content" class="__container !max-w-[800px] text-justify !py-12">
             {{-- H2 --}}
             <h2>{{ $title }}</h2>
-            <img src="{{ route('thumbnail-jalur-rute-travel', ['asal' => Str::slug($travel[0]['name']), 'tujuan' => Str::slug($travel[1]['name']), 'asalId' => $travel[0]['code'], 'tujuanId' => $travel[1]['code']]) }}"
+            <img src="{{ $thumbnail }}"
                 alt="{{ $title }}">
             <p>
                 <a href="{{ route('beranda') }}">{{ Str::upper(env('APP_NAME')) }}</a> kini hadir untuk membantu perjalanan
@@ -29,7 +29,7 @@
             <p>
                 Biaya dari {{ Str::title($travel[0]->name) }} menuju {{ Str::title($travel[1]->name) }} bisa berubah
                 tergantung situasi. Pesan tiket travel
-                <strong>{{ Str::title('Travel ' . $travel[0]->name . ' ' . $travel[1]->name) }}</strong> 5 hari sebelum
+                <strong>{{ $page }}</strong> 5 hari sebelum
                 berangkat agar dapat harga yang lebih murah. Jika
                 hari pemesanan dan hari keberangkatan dekat, maka harga mulai naik. Apalagi jika anda memesan tiket travel
                 pada
@@ -42,7 +42,7 @@
                 tersebut. Jika anda sudah membayar dan anda belum berada di titik penjemputan, maka uang anda akan
                 dikembalikan 50%. Jika driver telat menjemput anda, maka anda akan diantar dengan gratis, namun tidak
                 mendapat gratis makan. Berikut jadwal keberangkatan
-                {{ Str::title('Travel ' . $travel[0]->name . ' ' . $travel[1]->name) }}:
+                {{ $page }}:
             </p>
             <div class="relative rounded-xl overflow-auto">
                 <div class="shadow-sm overflow-x-auto my-4">
@@ -113,7 +113,7 @@
             {{-- H3 --}}
             <h3>Rute Travel Lengkap</h3>
             <p>Perlu anda ketahui bahwa kami melayani travel seluruh Indonesia, terutama pada rute
-                <strong>{{ Str::title('Travel ' . $travel[0]->name . ' ' . $travel[1]->name) }}</strong>. Dengan begitu
+                <strong>{{ $page }}</strong>. Dengan begitu
                 kami memiliki banyak <a href="{{ route('arsip-travel') }}">rute travel</a> yang akan membantu anda. Selain
                 itu, kami juga
                 memiliki agen travel di seluruh Indonesia. Baik itu dalam setiap provinsi, kota, kabupaten, hingga
@@ -128,7 +128,7 @@
                 @endforeach
             </ul>
             {{-- H2 --}}
-            <h2>Kelebihan Travel {{ Str::title($travel[0]->name . ' ' . $travel[1]->name) }} PP</h2>
+            <h2>Kelebihan {{ $page }} PP</h2>
             <p>
                 Kami menawarkan jasa travel dengan memperhatikan kepuasan pelanggan. Kami membantu anda 24 jam untuk
                 melakukan travel kemana pun di seluruh Indonesia. Berikut kelebihan kami sebagai jasa travel yang akan
@@ -148,7 +148,7 @@
             </ul>
             {{-- H2 --}}
             <h2>Cara Pesan Travel</h2>
-            <p>Pemesanan {{ Str::title('Travel ' . $travel[0]->name . ' ' . $travel[1]->name) }} dijamin sangat mudah (anti
+            <p>Pemesanan {{ $page }} dijamin sangat mudah (anti
                 ribet pokoknya). Anda tidak wajib datang ke garasi kami, bisa
                 dengan langsung memesan secara online. Pemesanan online dibuka 24 jam via kontak whatsapp pada nomor
                 {{ phone() }}. Pesan travel via online hanya melayani chat saja, jangan memanggil sembarangan.
@@ -207,7 +207,7 @@
             <h2>Tips Melakukan Perjalanan Travel</h2>
             <p>
                 Perjalanan travel pada umumnya sangat jauh dan lama, terutama
-                {{ Str::title('Travel ' . $travel[0]->name . ' ' . $travel[1]->name) }}. Travel biasanya difokuskan untuk
+                {{ $page }}. Travel biasanya difokuskan untuk
                 perjalanan
                 keluar
                 kota, seperti dari {{ Str::title($travel[0]->name . ' ke ' . $travel[1]->name) }} atau sebaliknya dari
@@ -232,8 +232,8 @@
                 Kami menawarkan anda jasa travel murah dengan banyak kelebihan, seperti harga murah dan fasilitas menarik.
                 Banyak pilihan mobil dan jadwal keberangkatan. Pemesanan travel yang mudah dan fleksibel. Lalu tunggu apa
                 lagi? Ayo segera jadwalkan perjalanan
-                <strong>{{ Str::title('Travel ' . $travel[0]->name . ' ' . $travel[1]->name) }}</strong> untuk besok,
-                tanggal {{ \Carbon\Carbon::now()->addDay()->locale('id')->isoFormat('D MMMM YYYY') }}
+                <strong>{{ $page }}</strong> untuk besok,
+                tanggal {{ \Carbon\Carbon::now()->addDay()->locale('id')->isoFormat('D MMMM YYYY') }}.
             </p>
         </section>
     </article>
