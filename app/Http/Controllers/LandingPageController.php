@@ -127,7 +127,15 @@ class LandingPageController extends Controller
             return ThumbnailController::generateThumbnail(["AGEN TRAVEL", $asalRes->name]);
         }
 
-        return $asalRes;
+        $page = Str::title("Agen Travel $asalRes->name");
+
+        return view('pages.agen', [
+            'page' => $page,
+            'title' => Str::title("$page Murah $this->year"),
+            'desc' => Str::title("$page Profesional Terbaik No. 1 di tahun $this->year dengan harga murah dan terjangkau"),
+            'agent' => $asalRes,
+            // 'recommendation' => $recommendation,
+        ]);
     }
 
 

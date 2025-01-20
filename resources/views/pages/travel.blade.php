@@ -6,7 +6,7 @@
             {{-- H2 --}}
             <h2>{{ $title }}</h2>
             <img src="{{ route('thumbnail-jalur-rute-travel', ['asal' => Str::slug($travel[0]['name']), 'tujuan' => Str::slug($travel[1]['name']), 'asalId' => $travel[0]['code'], 'tujuanId' => $travel[1]['code']]) }}"
-                alt="">
+                alt="{{ $title }}">
             <p>
                 <a href="{{ route('beranda') }}">{{ Str::upper(env('APP_NAME')) }}</a> kini hadir untuk membantu perjalanan
                 travel anda
@@ -28,7 +28,9 @@
             </p>
             <p>
                 Biaya dari {{ Str::title($travel[0]->name) }} menuju {{ Str::title($travel[1]->name) }} bisa berubah
-                tergantung situasi. Pesan tiket travel anda 5 hari sebelum berangkat agar dapat harga yang lebih murah. Jika
+                tergantung situasi. Pesan tiket travel
+                <strong>{{ Str::title('Travel ' . $travel[0]->name . ' ' . $travel[1]->name) }}</strong> 5 hari sebelum
+                berangkat agar dapat harga yang lebih murah. Jika
                 hari pemesanan dan hari keberangkatan dekat, maka harga mulai naik. Apalagi jika anda memesan tiket travel
                 pada
                 hari raya besar.
@@ -36,7 +38,12 @@
             {{-- H3 --}}
             <h3>Pilihan Jadwal keberangkatan Banyak</h3>
             <p>Setiap travel tentunya memiliki jadwal keberangkatan tersendiri. Kami juga memiliki jadwal sendiri,
-                keberangkatan setiap hari dengan jam tertentu. Berikut jadwalnya:</p>
+                keberangkatan setiap hari dengan jam-jam tertentu. Dimohon untuk sudah bersiap di titik penjemputan pada jam
+                tersebut. Jika anda sudah membayar dan anda belum berada di titik penjemputan, maka uang anda akan
+                dikembalikan 50%. Jika driver telat menjemput anda, maka anda akan diantar dengan gratis, namun tidak
+                mendapat gratis makan. Berikut jadwal keberangkatan
+                {{ Str::title('Travel ' . $travel[0]->name . ' ' . $travel[1]->name) }}:
+            </p>
             <div class="relative rounded-xl overflow-auto">
                 <div class="shadow-sm overflow-x-auto my-4">
                     <table class="border-collapse table-auto w-full">
@@ -75,10 +82,40 @@
                 Semua unit telah dilengkapi dengan fasilitas terbaik, seperti AC dan audio. Perjalanan anda semakin nyaman
                 bersama {{ Str::upper(env('APP_NAME')) }}.
             </p>
+            <p>
+                Beberapa jenis mobil travel yang akan mengantar anda:
+            </p>
+            <ul>
+                <li>Hiace Commuter 14 Kursi</li>
+                <li>Hiace Commuter Semi Luxury 10 Kursi</li>
+                <li>Hiace Commuter Luxury 8 Kursi</li>
+                <li>Hiace Premio 14 Kursi</li>
+                <li>Hiace Premio Semi Luxury 10 Kursi</li>
+                <li>Hiace Premio Luxury 8 Kursi</li>
+                <li>Alphard/Vellfire</li>
+                <li>Innova Reborn</li>
+                <li>Innova Grand New</li>
+                <li>Avanza New</li>
+                <li>Xenia</li>
+                <li>Expander</li>
+                <li>Hyundai Stargazer</li>
+            </ul>
+            <p>
+                Tapi jika anda memesan carter, anda bisa memilih:
+            </p>
+            <ul>
+                <li>Fortuner</li>
+                <li>Pajero</li>
+                <li>Mercedes-Benz</li>
+                <li>Land Cruiser</li>
+            </ul>
+            <p>Cukup menarik bukan? Ayo segera pesan travel anda!</p>
             {{-- H3 --}}
-            <h3>Rute Lengkap</h3>
-            <p>Perlu anda ketahui bahwa kami melayani travel seluruh Indonesia. Dengan begitu kami memiliki banyak <a
-                    href="{{ route('arsip-travel') }}">rute travel</a> yang akan membantu anda. Selain itu, kami juga
+            <h3>Rute Travel Lengkap</h3>
+            <p>Perlu anda ketahui bahwa kami melayani travel seluruh Indonesia, terutama pada rute
+                <strong>{{ Str::title('Travel ' . $travel[0]->name . ' ' . $travel[1]->name) }}</strong>. Dengan begitu
+                kami memiliki banyak <a href="{{ route('arsip-travel') }}">rute travel</a> yang akan membantu anda. Selain
+                itu, kami juga
                 memiliki agen travel di seluruh Indonesia. Baik itu dalam setiap provinsi, kota, kabupaten, hingga
                 kecamatan.
             </p>
@@ -111,7 +148,8 @@
             </ul>
             {{-- H2 --}}
             <h2>Cara Pesan Travel</h2>
-            <p>Pemesanan travel dijamin sangat mudah (anti ribet pokoknya). Anda tidak wajib datang ke garasi kami, bisa
+            <p>Pemesanan {{ Str::title('Travel ' . $travel[0]->name . ' ' . $travel[1]->name) }} dijamin sangat mudah (anti
+                ribet pokoknya). Anda tidak wajib datang ke garasi kami, bisa
                 dengan langsung memesan secara online. Pemesanan online dibuka 24 jam via kontak whatsapp pada nomor
                 {{ phone() }}. Pesan travel via online hanya melayani chat saja, jangan memanggil sembarangan.
             </p>
@@ -168,7 +206,10 @@
             {{-- H2 --}}
             <h2>Tips Melakukan Perjalanan Travel</h2>
             <p>
-                Perjalanan travel pada umumnya sangat jauh dan lama. Travel biasanya difokuskan untuk perjalanan keluar
+                Perjalanan travel pada umumnya sangat jauh dan lama, terutama
+                {{ Str::title('Travel ' . $travel[0]->name . ' ' . $travel[1]->name) }}. Travel biasanya difokuskan untuk
+                perjalanan
+                keluar
                 kota, seperti dari {{ Str::title($travel[0]->name . ' ke ' . $travel[1]->name) }} atau sebaliknya dari
                 {{ Str::title($travel[1]->name . ' ke ' . $travel[0]->name) }}. Bahkan banyak yang menggunakannya untuk
                 keluar provinsi dan pulau. Sudah pasti perjalanannya berjam-jam.
@@ -179,12 +220,21 @@
             </p>
             <ul>
                 <li>Jadwalkan travel jauh-jauh hari agar anda bisa bersiap-siap,</li>
-                <li>Selalu jaga kesahatan tubuh anda,</li>
+                <li>Selalu jaga kesehatan tubuh anda,</li>
                 <li>Siapkan obat-obatan pribadi jika anda sakit, dan bawa obat anti mabuk jika mabuk darat/laut,</li>
-                <li>Rapikan semua bawang bawaan anda dalam koper atau kardus,</li>
+                <li>Merapikan semua barang bawaan anda dalam koper atau kardus,</li>
                 <li>Pilih posisi duduk yang nyaman menurut anda,</li>
                 <li>Bawa makan, minum, dan jajan jika anda merasa makanan yang diberikan oleh petugas kurang.</li>
             </ul>
+            {{-- H2 --}}
+            <h2>Kesimpulan</h2>
+            <p>
+                Kami menawarkan anda jasa travel murah dengan banyak kelebihan, seperti harga murah dan fasilitas menarik.
+                Banyak pilihan mobil dan jadwal keberangkatan. Pemesanan travel yang mudah dan fleksibel. Lalu tunggu apa
+                lagi? Ayo segera jadwalkan perjalanan
+                <strong>{{ Str::title('Travel ' . $travel[0]->name . ' ' . $travel[1]->name) }}</strong> untuk besok,
+                tanggal {{ \Carbon\Carbon::now()->addDay()->locale('id')->isoFormat('D MMMM YYYY') }}
+            </p>
         </section>
     </article>
 @endsection
