@@ -1,13 +1,11 @@
-@dd(route('cari-travel'))
-{{-- <form method="POST" action={{ route('cari-travel') }}
+<form method="POST" action={{ route('cari-agen') }}
     class="w-full max-w-[400px] sm:max-w-[550px] border border-gray-300 px-4 py-5 md:p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg">
     @method('POST')
     @csrf
-    <div class="grid grid-cols-2 gap-x-5 gap-y-3 [&_p]:text-sm [&_p]:text-slate-600 [&_p]:font-semibold">
+    <div class="grid grid-cols-1 gap-x-5 gap-y-3 [&_p]:text-sm [&_p]:text-slate-600 [&_p]:font-semibold">
         @livewire('select-area', ['label' => 'Asal'])
-        @livewire('select-area', ['label' => 'Tujuan'])
     </div>
     <div class="[&>*]:w-full [&_span]:mx-auto">
         <x-button text="Cari Rute" :submit="true" class="relative z-[1]" :transparant="false" />
     </div>
-</form> --}}
+</form>

@@ -64,7 +64,7 @@ class LandingPageController extends Controller
         ]);
     }
 
-    public function cariRute(Request $request)
+    public function cariTravel(Request $request)
     {
         $validation = $request->validate([
             "asal_provinsi" => "required|integer|exists:indonesia_provinces,code",
@@ -173,7 +173,6 @@ class LandingPageController extends Controller
             'title' => "Arsip Agen Travel Termurah " . date('Y'),
             'desc' => "Arsip Agen Travel Termurah dan Terbaik No. 1 di Indonesia",
             'agent' => $this->province->merge($this->city),
-
         ]);
     }
 }
