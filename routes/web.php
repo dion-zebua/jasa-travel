@@ -32,8 +32,8 @@ Route::controller(LandingPageController::class)->group(function () {
 
     Route::get('/tentang-kami', 'beranda')->name('tentang-kami');
 
-    Route::post('/', 'cariTravel')->name('cari-travel');
-    Route::post('/', 'cariAgen')->name('cari-agen');
+    Route::post('/cari-travel', 'cariTravel')->name('cari-travel');
+    Route::post('/cari-agen', 'cariAgen')->name('cari-agen');
 
     Route::prefix('/rute-travel/dari-{asal}/ke-{tujuan}/{asalId}/{tujuanId}')->group(function () {
 

@@ -1,5 +1,4 @@
-@dd(route('cari-travel'))
-{{-- <form method="POST" action={{ route('cari-travel') }}
+<form method="POST" action={{ route('cari-travel') }}
     class="w-full max-w-[400px] sm:max-w-[550px] border border-gray-300 px-4 py-5 md:p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg">
     @method('POST')
     @csrf
@@ -10,4 +9,4 @@
     <div class="[&>*]:w-full [&_span]:mx-auto">
         <x-button text="Cari Rute" :submit="true" class="relative z-[1]" :transparant="false" />
     </div>
-</form> --}}
+</form>
