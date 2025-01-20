@@ -34,7 +34,7 @@
                 hari raya besar.
             </p>
             {{-- H3 --}}
-            <h3>Jadwal keberangkatan</h3>
+            <h3>Pilihan Jadwal keberangkatan Banyak</h3>
             <p>Setiap travel tentunya memiliki jadwal keberangkatan tersendiri. Kami juga memiliki jadwal sendiri,
                 keberangkatan setiap hari dengan jam tertentu. Berikut jadwalnya:</p>
             <div class="relative rounded-xl overflow-auto">
@@ -165,6 +165,26 @@
             <p>
                 Setiap agen tersebut sudah berpengalaman pada rutenya. Tidak perlu khawatir dijamin aman dan selamat.
             </p>
+            {{-- H2 --}}
+            <h2>Tips Melakukan Perjalanan Travel</h2>
+            <p>
+                Perjalanan travel pada umumnya sangat jauh dan lama. Travel biasanya difokuskan untuk perjalanan keluar
+                kota, seperti dari {{ Str::title($travel[0]->name . ' ke ' . $travel[1]->name) }} atau sebaliknya dari
+                {{ Str::title($travel[1]->name . ' ke ' . $travel[0]->name) }}. Bahkan banyak yang menggunakannya untuk
+                keluar provinsi dan pulau. Sudah pasti perjalanannya berjam-jam.
+            </p>
+            <p>
+                Anda harus mempersiapkan banyak hal agar anda tetap dalam keadaan sehat dan sampai ke tujuan dengan keadaan
+                normal. Berikut tipsnya:
+            </p>
+            <ul>
+                <li>Jadwalkan travel jauh-jauh hari agar anda bisa bersiap-siap,</li>
+                <li>Selalu jaga kesahatan tubuh anda,</li>
+                <li>Siapkan obat-obatan pribadi jika anda sakit, dan bawa obat anti mabuk jika mabuk darat/laut,</li>
+                <li>Rapikan semua bawang bawaan anda dalam koper atau kardus,</li>
+                <li>Pilih posisi duduk yang nyaman menurut anda,</li>
+                <li>Bawa makan, minum, dan jajan jika anda merasa makanan yang diberikan oleh petugas kurang.</li>
+            </ul>
         </section>
     </article>
 @endsection
