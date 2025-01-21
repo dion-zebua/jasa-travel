@@ -30,13 +30,10 @@ Route::controller(LandingPageController::class)->group(function () {
     Route::get('/arsip-travel', 'arsipTravel')->name('arsip-travel');
     Route::get('/arsip-agen', 'arsipAgen')->name('arsip-agen');
 
-    Route::get('/tentang-kami', 'beranda')->name('tentang-kami');
-
     Route::post('/cari-travel', 'cariTravel')->name('cari-travel');
     Route::post('/cari-agen', 'cariAgen')->name('cari-agen');
 
     Route::prefix('/rute-travel/dari-{asal}/ke-{tujuan}/{asalId}/{tujuanId}')->group(function () {
-
         Route::get('/', 'jalurRuteTravel')->name('jalur-rute-travel');
         Route::get('/thumbnail.jpg', 'jalurRuteTravel')->name('thumbnail-jalur-rute-travel');
     });

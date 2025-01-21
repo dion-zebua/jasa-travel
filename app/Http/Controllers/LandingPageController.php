@@ -93,6 +93,25 @@ class LandingPageController extends Controller
         return redirect()->route('jalur-rute-travel', $dataRes);
     }
 
+    public function cariAgen(Request $request)
+    {
+        $validation = $request->validate([
+            "asal_provinsi" => "required|integer|exists:indonesia_provinces,code",
+            "asal_kotakab" => "nullable|integer|exists:indonesia_cities,code",
+            "asal_kecamatan" => "nullable|integer|exists:indonesia_districts,code",
+        ]);
+
+        $dataRes = [
+            Str::slug(District::where('code', $request->asal_kecamatan)->first()?->name ??
+                City::where('code', $request->asal_kotakab)->first()?->name ??
+                Province::where('code', $request->asal_provinsi)->first()?->name) ?? NULL,
+
+            $request->asal_kecamatan ?? $request->asal_kotakab ?? $request->asal_provinsi ?? 0,
+        ];
+
+        return redirect()->route('agen-travel', $dataRes);
+    }
+
     public function jalurRuteTravel($asal, $tujuan, $asalId, $tujuanId)
     {
         $asalRes = $this->checkCode($asalId);
@@ -126,8 +145,11 @@ class LandingPageController extends Controller
 
     public function agenTravel($asal, $asalId)
     {
-
         $asalRes = $this->checkCode($asalId);
+
+        if (Str::slug($asalRes->name) != $asal) {
+            abort(404);
+        }
 
         if (Route::currentRouteName() === 'thumbnail-agen-travel') {
             return ThumbnailController::generateThumbnail(["AGEN TRAVEL", $asalRes->name]);
@@ -140,7 +162,6 @@ class LandingPageController extends Controller
             'title' => Str::title("8 $page Murah " . date('Y')),
             'desc' => Str::title("8 Rekomendasi $page Profesional Terbaik No. 1 di tahun " . date('Y') . " dengan harga murah"),
             'agent' => $asalRes,
-            // 'recommendation' => $recommendation,
             'thumbnail' => route('thumbnail-agen-travel', ['asal' => Str::slug($asalRes->name), 'asalId' => $asalRes->code]),
         ]);
     }
@@ -148,6 +169,7 @@ class LandingPageController extends Controller
 
     public function checkCode($code)
     {
+        // $name = Str::slug($name);
         if ($code <= 92) {
             $res = Province::where('code', $code)->firstOrFail();
         } elseif ($code <= 9271) {
