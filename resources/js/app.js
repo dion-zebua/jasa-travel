@@ -11,9 +11,9 @@ if (mobileMenuList && mobileMenuToggle) {
         // whatsapp.classList.add('hidden')
         // whatsapp.classList.add('md:block')
     })
-
+    
     const mobileMenuHidden = document.querySelector('#mobile-menu-hidden');
-
+    
     mobileMenuHidden.addEventListener('click', e => {
         mobileMenuList.classList.remove('!block')
         document.body.classList.remove('overflow-hidden')
@@ -21,3 +21,6 @@ if (mobileMenuList && mobileMenuToggle) {
         // whatsapp.classList.remove('md:block')
     })
 }
+
+const replaceSearch = document.querySelector('#baner')
+console.log(replaceSearch);

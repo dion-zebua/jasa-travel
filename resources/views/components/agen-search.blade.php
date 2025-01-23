@@ -8,4 +8,6 @@
     <div class="[&>*]:w-full [&_span]:mx-auto">
         <x-button text="Cari Agen" :submit="true" class="relative z-[1]" :transparant="false" />
     </div>
+    <a href="{{ Route::currentRouteName() == 'beranda' ? '#!' : route('arsip-travel') }}"
+        class="text-sm underline text-blue-600 text-right">Cari travel?</a>
 </form>
