@@ -9,7 +9,7 @@
             reguler kami!</p>
     </div>
     <div class="w-full !z-[2] px-5">
-        <div class="container mx-auto flex justify-center items-center">
+        <div class="container mx-auto flex justify-center items-center last:[&>*]:hidden">
             <x-travel-search />
             <x-agen-search />
         </div>
