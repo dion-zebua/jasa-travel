@@ -6,6 +6,6 @@
         @livewire('select-area', ['label' => 'Asal'])
     </div>
     <div class="[&>*]:w-full [&_span]:mx-auto">
-        <x-button text="Cari Rute" :submit="true" class="relative z-[1]" :transparant="false" />
+        <x-button text="Cari Agen" :submit="true" class="relative z-[1]" :transparant="false" />
     </div>
 </form>
