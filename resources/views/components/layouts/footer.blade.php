@@ -49,7 +49,7 @@
 
             <div class="text-center py-5 mt-10 text-sm border-t border-blue-400">
                 Dikembangkan oleh <a class="underline" target="_blank" rel="nofollow noindex"
-                    href="https://{{ developer() }}">{{ developer() }}</a>
+                    href="https://{{ developer() }}">{{ developer() }}</a><br>Februari 2025 - {{ \Carbon\Carbon::now()->locale('id')->isoFormat('MMMM YYYY') }}
             </div>
         </div>
     </x-background-blue>

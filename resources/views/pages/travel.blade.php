@@ -5,8 +5,7 @@
         <section id="content" class="__container !max-w-[800px] text-justify !py-12">
             {{-- H2 --}}
             <h2>{{ $title }}</h2>
-            <img src="{{ $thumbnail }}"
-                alt="{{ $title }}">
+            <img src="{{ $thumbnail }}" alt="{{ $title }}">
             <p>
                 <a href="{{ route('beranda') }}">{{ Str::upper(env('APP_NAME')) }}</a> kini hadir untuk membantu perjalanan
                 travel anda
@@ -44,6 +43,7 @@
                 mendapat gratis makan. Berikut jadwal keberangkatan
                 {{ $page }}:
             </p>
+            {{-- TABLE --}}
             <div class="relative rounded-xl overflow-auto">
                 <div class="shadow-sm overflow-x-auto my-4">
                     <table class="border-collapse table-auto w-full">
@@ -185,6 +185,7 @@
             <ul class="[&>li]:font-semibold [&>li>ul]:font-normal">
                 <li>{{ Str::title($travel[0]->name) }}
                     <ul class="!list-decimal">
+                        <li>{{ env('APP_NAME') }} (kami)</li>
                         <li>Pahala Pelita Travel</li>
                         <li>Seraya Trans {{ Str::title($travel[0]->name) }}</li>
                         <li>LNT Trans</li>
@@ -193,6 +194,7 @@
                 </li>
                 <li>{{ Str::title($travel[1]->name) }}
                     <ul class="!list-decimal">
+                        <li>{{ env('APP_NAME') }} (kami)</li>
                         <li>Ratu Abadi {{ Str::title($travel[1]->name) }}</li>
                         <li>Safania Trans & Travel</li>
                         <li>Buaya Darat Tour</li>
@@ -233,7 +235,7 @@
                 Banyak pilihan mobil dan jadwal keberangkatan. Pemesanan travel yang mudah dan fleksibel. Lalu tunggu apa
                 lagi? Ayo segera jadwalkan perjalanan
                 <strong>{{ $page }}</strong> untuk besok,
-                tanggal {{ \Carbon\Carbon::now()->addDay()->locale('id')->isoFormat('D MMMM YYYY') }}.
+                tanggal {{ \Carbon\Carbon::now()->addDay(5)->locale('id')->isoFormat('D MMMM YYYY') }}.
             </p>
         </section>
     </article>

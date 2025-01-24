@@ -31,6 +31,9 @@
         & ul {
             @apply list-disc ms-6 mb-4;
         }
+        & table {
+            @apply !text-left;
+        }
     }
 
     h1,

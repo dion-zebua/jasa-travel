@@ -7,8 +7,61 @@
             <h2>{{ $title }}</h2>
             <img src="{{ $thumbnail }}" alt="{{ $title }}">
             <p>
-                Setiap <strong>{{ $page }}</strong> pada umumnya memiliki kelebihan dan kekurangan masing-masing.
+                Setiap <strong><a
+                        href="{{ route('agen-travel', ['asal' => Str::slug($agent->name), 'asalId' => $agent->code]) }}">{{ $page }}</a></strong>
+                pada umumnya memiliki kelebihan dan kekurangan masing-masing. Namun kami akan memberikan rekomendasi agen
+                travel yang amanah dan profesional. Mereka menawarkan pelayanan yang responsif yang tak perlu anda ragukan.
+                Karena setiap jasa travel siap membantu anda 24 jam. Perjalanan jadi cepat dan sampai di tujuan dengan
+                selamat.
             </p>
+            <p>
+                Jika anda sedang berada di daerah {{ Str::title($agent->name) }} dan ingin melakukan perjalanan ke luar kota
+                maupun ke luar daerah, maka anda sangat disarankan untuk memesan travel pada agen-agen yang kami
+                rekomendasikan. Dengan begitu tidak perlu ribet mencari agen lagi, cukup hubungi mereka via whatsapp pada
+                nomor yang tertera di bawah ini nanti.
+            </p>
+            <p>
+                Berikut daftar agen travel yang kami rekomendasikan:
+            </p>
+            <h3>{{ env('APP_NAME') }}</h3>
+            <p>Agen yang pertama adalah <a href="{{ route('beranda') }}">{{ env('APP_NAME') }}</a>. {{ env('APP_NAME') }}
+                kini menawarkan jasa travel reguler seluruh indonesia. Pada website resmi kami, anda bisa mencari rute dari
+                ACEH sampai Papua. Siap antar jemput ke setiap kecamatan, kabupaten, kota, dan provinsi.
+                {{ env('APP_NAME') }} sangat berpengalaman kali ini, bisa dikatakan bahwa {{ env('APP_NAME') }} merupakan
+                agen travel terbaik no. 1 di indonesia.</p>
+            <p>Untuk memastikan keraguan anda, anda bisa membayar biaya travel ketika anda sampai di lokasi. Tidak
+                disarankan untuk membayar kepada driver. Bisa langsung menghubungi admin untuk menanyakan metode pembayaran.
+                Untuk lebih detail, berikut profil dari {{ env('APP_NAME') }}:
+            </p>
+            {{-- TABLE --}}
+            <div class="relative rounded-xl overflow-auto">
+                <div class="shadow-sm overflow-x-auto my-4">
+                    <table class="border-collapse table-auto w-full">
+                        <thead class="bg-white">
+                            <tr
+                                class=" [&_th]:border-b [&_th]:font-medium [&_th]:whitespace-nowrap [&_th]:p-4 [&_th]:pb-3 [&_th]:text-slate-700 [&_th]:w-1/2">
+                                <th class="!pl-8">Nama</th>
+                                <th class="!pr-8 !font-bold">{{ env('APP_NAME') }}</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Alamat</td>
+                                <td class="pr-8">Tersedia diseluruh kecamatan, kabupaten, kota, dan provinsi di indonesia
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Whatsapp</td>
+                                <td class="pr-8">0882-8931-7870</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Telepon</td>
+                                <td class="pr-8">0882-8931-7870</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
     </article>
 @endsection
