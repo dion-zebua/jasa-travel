@@ -58,10 +58,36 @@
                                 <td class="!pl-8">Telepon</td>
                                 <td class="pr-8">0882-8931-7870</td>
                             </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Unit</td>
+                                <td class="pr-8">Xennia, Luxio, Innova Reborn, Fortuner, dan Hiace</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Jadwal</td>
+                                <td class="pr-8">Setiap Jam</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Harga</td>
+                                <td class="pr-8">Mulai dari Rp100.000</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Fasilitas</td>
+                                <td class="pr-8">Bonus makan, minum, snack, via tol, dan door to door.</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Layanan Lain</td>
+                                <td class="pr-8">Carter drop, Kirim paket/dokumen, dan Paket wisata keliling
+                                    {{ Str::title($agent->name) }}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
+            {{-- H3 --}}
+            <h3>SL Twin Trans Travel</h3>
+            <p>
+                Yang kedua adalah <a href="https://www.sltwintranstravel.my.id/" target="_blank">SL Twin Trans Travel</a>
+            </p>
         </section>
     </article>
 @endsection
