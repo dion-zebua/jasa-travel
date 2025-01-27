@@ -86,7 +86,9 @@
             {{-- H3 --}}
             <h3>SL Twin Trans Travel</h3>
             <p>
-                Yang kedua adalah <a href="https://www.sltwintranstravel.my.id/" target="_blank">SL Twin Trans Travel</a>
+                Yang kedua adalah <a href="https://www.sltwintranstravel.my.id/" target="_blank">SL Twin Trans Travel</a>,
+                agen travel terbaik dari daerah Ciamis, Semarang dan sekitarnya. SL Twin Trans Travel biasanya melayani jasa
+                <strong>{{ Str::title($page) }}</strong> tujuan seluruh Indonesia. Anda bisa tanyakan lebih detail untuk daerah yang dijangkau dan tidak dijangkau.
             </p>
         </section>
     </article>
