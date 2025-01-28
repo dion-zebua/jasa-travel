@@ -1,23 +1,29 @@
 @extends('app')
 @section('content')
     <x-default-baner :title="$page . ' PP Murah ' . date('Y')" :desc="$desc . '.'" />
-    <article>
-        <section id="content" class="__container !max-w-[800px] text-justify !py-12">
+    <x-layouts.article-section>
+
+        {{-- left --}}
+        <x-layouts.article-left>
             {{-- H2 --}}
             <h2>{{ $title }}</h2>
             <img src="{{ $thumbnail }}" alt="{{ $title }}">
             <p>
                 Setiap <strong><a
                         href="{{ route('agen-travel', ['asal' => Str::slug($agent->name), 'asalId' => $agent->code]) }}">{{ $page }}</a></strong>
-                pada umumnya memiliki kelebihan dan kekurangan masing-masing. Namun kami akan memberikan rekomendasi agen
-                travel yang amanah dan profesional. Mereka menawarkan pelayanan yang responsif yang tak perlu anda ragukan.
+                pada umumnya memiliki kelebihan dan kekurangan masing-masing. Namun kami akan memberikan rekomendasi
+                agen
+                travel yang amanah dan profesional. Mereka menawarkan pelayanan yang responsif yang tak perlu anda
+                ragukan.
                 Karena setiap jasa travel siap membantu anda 24 jam. Perjalanan jadi cepat dan sampai di tujuan dengan
                 selamat.
             </p>
             <p>
-                Jika anda sedang berada di daerah {{ Str::title($agent->name) }} dan ingin melakukan perjalanan ke luar kota
+                Jika anda sedang berada di daerah {{ Str::title($agent->name) }} dan ingin melakukan perjalanan ke luar
+                kota
                 maupun ke luar daerah, maka anda sangat disarankan untuk memesan travel pada agen-agen yang kami
-                rekomendasikan. Dengan begitu tidak perlu ribet mencari agen lagi, cukup hubungi mereka via whatsapp pada
+                rekomendasikan. Dengan begitu tidak perlu ribet mencari agen lagi, cukup hubungi mereka via whatsapp
+                pada
                 nomor yang tertera di bawah ini nanti.
             </p>
             <p>
@@ -25,12 +31,15 @@
             </p>
             <h3>{{ env('APP_NAME') }}</h3>
             <p>Agen yang pertama adalah <a href="{{ route('beranda') }}">{{ env('APP_NAME') }}</a>. {{ env('APP_NAME') }}
-                kini menawarkan jasa travel reguler seluruh indonesia. Pada website resmi kami, anda bisa mencari rute dari
+                kini menawarkan jasa travel reguler seluruh indonesia. Pada website resmi kami, anda bisa mencari rute
+                dari
                 ACEH sampai Papua. Siap antar jemput ke setiap kecamatan, kabupaten, kota, dan provinsi.
-                {{ env('APP_NAME') }} sangat berpengalaman kali ini, bisa dikatakan bahwa {{ env('APP_NAME') }} merupakan
+                {{ env('APP_NAME') }} sangat berpengalaman kali ini, bisa dikatakan bahwa {{ env('APP_NAME') }}
+                merupakan
                 agen travel terbaik no. 1 di indonesia.</p>
             <p>Untuk memastikan keraguan anda, anda bisa membayar biaya travel ketika anda sampai di lokasi. Tidak
-                disarankan untuk membayar kepada driver. Bisa langsung menghubungi admin untuk menanyakan metode pembayaran.
+                disarankan untuk membayar kepada driver. Bisa langsung menghubungi admin untuk menanyakan metode
+                pembayaran.
                 Untuk lebih detail, berikut profil dari {{ env('APP_NAME') }}:
             </p>
             {{-- TABLE --}}
@@ -47,7 +56,8 @@
                         <tbody class="bg-white">
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Alamat</td>
-                                <td class="pr-8">Tersedia diseluruh kecamatan, kabupaten, kota, dan provinsi di indonesia
+                                <td class="pr-8">Tersedia diseluruh kecamatan, kabupaten, kota, dan provinsi di
+                                    indonesia
                                 </td>
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
@@ -86,10 +96,21 @@
             {{-- H3 --}}
             <h3>SL Twin Trans Travel</h3>
             <p>
-                Yang kedua adalah <a href="https://www.sltwintranstravel.my.id/" target="_blank">SL Twin Trans Travel</a>,
-                agen travel terbaik dari daerah Ciamis, Semarang dan sekitarnya. SL Twin Trans Travel biasanya melayani jasa
-                <strong>{{ Str::title($page) }}</strong> tujuan seluruh Indonesia. Anda bisa tanyakan lebih detail untuk daerah yang dijangkau dan tidak dijangkau.
+                Yang kedua adalah <a href="https://www.sltwintranstravel.my.id/" target="_blank">SL Twin Trans
+                    Travel</a>,
+                agen travel terbaik dari daerah Ciamis, Semarang dan sekitarnya. SL Twin Trans Travel biasanya melayani
+                jasa
+                <strong>{{ Str::title($page) }}</strong> tujuan seluruh Indonesia. Anda bisa tanyakan lebih detail
+                untuk daerah yang dijangkau dan tidak dijangkau.
             </p>
-        </section>
-    </article>
+        </x-layouts.article-left>
+
+
+        {{-- right --}}
+        <x-layouts.article-right>
+            <x-booking :page="$page" />
+        </x-layouts.article-right>
+
+
+    </x-layouts.article-section>
 @endsection

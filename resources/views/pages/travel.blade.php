@@ -258,5 +258,7 @@
         <x-layouts.article-right>
             <x-booking :page="$page" />
         </x-layouts.article-right>
+
+
     </x-layouts.article-section>
 @endsection
