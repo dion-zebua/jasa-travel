@@ -103,6 +103,10 @@
                 <strong>{{ Str::title($page) }}</strong> tujuan seluruh Indonesia. Anda bisa tanyakan lebih detail
                 untuk daerah yang dijangkau dan tidak dijangkau.
             </p>
+            <p>
+                SL Twin Trans Travel telah berpengalaman lebih dari 5 tahun menjadi agen travel. Driver yang ada sangat profesional dan amanah. Setiap unit yang dimiliki telah dilengkapi fasilitas AC dan Audio. Berikut detail agen travel ini:
+            </p>
+            
         </x-layouts.article-left>
 
 
