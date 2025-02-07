@@ -93,7 +93,7 @@
                     </table>
                 </div>
             </div>
-            {{-- H3 --}}
+            {{-- H3 SL TWIN TRANS TRAVEL --}}
             <h3>SL Twin Trans Travel</h3>
             <p>
                 Yang kedua adalah <a href="https://www.sltwintranstravel.my.id/" target="_blank">SL Twin Trans
@@ -104,9 +104,67 @@
                 untuk daerah yang dijangkau dan tidak dijangkau.
             </p>
             <p>
-                SL Twin Trans Travel telah berpengalaman lebih dari 5 tahun menjadi agen travel. Driver yang ada sangat profesional dan amanah. Setiap unit yang dimiliki telah dilengkapi fasilitas AC dan Audio. Berikut detail agen travel ini:
+                SL Twin Trans Travel telah berpengalaman lebih dari 5 tahun menjadi agen travel. Driver yang ada sangat
+                profesional dan amanah. Setiap unit yang dimiliki telah dilengkapi fasilitas AC dan Audio. Berikut detail
+                agen travel ini:
             </p>
-            
+            {{-- TABLE --}}
+            <div class="relative rounded-xl overflow-auto">
+                <div class="shadow-sm overflow-x-auto my-4">
+                    <table class="border-collapse table-auto w-full">
+                        <thead class="bg-white">
+                            <tr
+                                class=" [&_th]:border-b [&_th]:font-medium [&_th]:whitespace-nowrap [&_th]:p-4 [&_th]:pb-3 [&_th]:text-slate-700 [&_th]:w-1/2">
+                                <th class="!pl-8">Nama</th>
+                                <th class="!pr-8 !font-bold">SL Twin Trans Travel</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Alamat</td>
+                                <td class="pr-8">Kabupaten Ciamis, Jawa Barat
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Whatsapp</td>
+                                <td class="pr-8">0899-0704-308</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Telepon</td>
+                                <td class="pr-8">0899-0704-308</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Unit</td>
+                                <td class="pr-8">Toyota Avanza, Calya, Luxio, Hiace, dan Innova</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Jadwal</td>
+                                <td class="pr-8">
+                                    <ul>
+                                        <li>Pagi : Jam 07.00 WIB</li>
+                                        <li>Siang : Jam 12.00 WIB</li>
+                                        <li>Sore : Jam 17.00 WIB</li>
+                                        <li>Malam : Jam 21.00/23.00 WIB</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Harga</td>
+                                <td class="pr-8">Mulai dari Rp100.000</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Fasilitas</td>
+                                <td class="pr-8">Bonus makan, minum, snack, via tol, dan door to door.</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Layanan Lain</td>
+                                <td class="pr-8">Carter drop, Kirim paket/dokumen, dan Paket wisata keliling
+                                    {{ Str::title($agent->name) }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </x-layouts.article-left>
 
 
