@@ -154,12 +154,11 @@
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Fasilitas</td>
-                                <td class="pr-8">Bonus makan, minum, snack, via tol, dan door to door.</td>
+                                <td class="pr-8">Bonus minum, snack, via tol, dan door to door.</td>
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Layanan Lain</td>
-                                <td class="pr-8">Carter drop, Kirim paket/dokumen, dan Paket wisata keliling
-                                    {{ Str::title($agent->name) }}</td>
+                                <td class="pr-8">Carter drop dan Kirim paket/dokumen</td>
                             </tr>
                         </tbody>
                     </table>
