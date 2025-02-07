@@ -17,7 +17,7 @@
         }
         & h2,
         & h3 {
-            @apply text-left;
+            @apply text-left font-bold;
         }
         & p {
             @apply mb-3;
