@@ -164,13 +164,14 @@
                     </table>
                 </div>
             </div>
-            {{-- H3 Saffana Travel --}}
-            <h3>Saffana Travel</h3>
+            {{-- H3 Saffana Trans --}}
+            <h3>Saffana Trans</h3>
             <p>
-                Selanjutnya Agen Saffana Travel dari Semarang. <a href="https://www.saffana-travel.web.id/"
-                    target="_blank">Saffana Travel</a> sangat rekomendasi untuk perjalanan travel, baik dalam kota maupun keluar kota. 
+                Selanjutnya Agen Saffana Trans dari Semarang. <a href="https://saffana-trans.web.id/"
+                    target="_blank">Saffana Trans</a> sangat rekomendasi untuk perjalanan travel, baik dalam kota maupun keluar kota. Mereka telah berpengalaman dalam melakukan perjalanan travel lebih dari 8 tahun. Dengan unit mobil dan bus yang berbagai macam.
             </p>
             <p>
+
             </p>
             {{-- TABLE --}}
             <div class="relative rounded-xl overflow-auto">
