@@ -167,8 +167,8 @@
             {{-- H3 Saffana Travel --}}
             <h3>Saffana Travel</h3>
             <p>
-                Selanjutnya Saffana Travel dari Semarang. <a href="https://www.saffana-travel.web.id/"
-                    target="_blank">Saffana Travel</a>
+                Selanjutnya Agen Saffana Travel dari Semarang. <a href="https://www.saffana-travel.web.id/"
+                    target="_blank">Saffana Travel</a> sangat rekomendasi untuk perjalanan travel, baik dalam kota maupun keluar kota. 
             </p>
             <p>
             </p>
