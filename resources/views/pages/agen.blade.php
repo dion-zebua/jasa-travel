@@ -29,6 +29,7 @@
             <p>
                 Berikut daftar agen travel yang kami rekomendasikan:
             </p>
+
             <h3>{{ env('APP_NAME') }}</h3>
             <p>Agen yang pertama adalah <a href="{{ route('beranda') }}">{{ env('APP_NAME') }}</a>. {{ env('APP_NAME') }}
                 kini menawarkan jasa travel reguler seluruh indonesia. Pada website resmi kami, anda bisa mencari rute
@@ -93,6 +94,7 @@
                     </table>
                 </div>
             </div>
+
             {{-- H3 SL TWIN TRANS TRAVEL --}}
             <h3>SL Twin Trans Travel</h3>
             <p>
@@ -164,15 +166,25 @@
                     </table>
                 </div>
             </div>
+
             {{-- H3 Saffana Trans --}}
             <h3>Saffana Trans</h3>
             <p>
                 Selanjutnya Agen Saffana Trans dari Semarang. <a href="https://saffana-trans.web.id/"
-                    target="_blank">Saffana Trans</a> sangat rekomendasi untuk perjalanan travel, baik dalam kota maupun keluar kota. Mereka telah berpengalaman dalam melakukan perjalanan travel lebih dari 8 tahun. Dengan unit mobil dan bus yang berbagai macam.
+                    target="_blank">Saffana Trans</a> sangat rekomendasi untuk perjalanan travel, baik dalam kota maupun
+                keluar kota. Mereka telah berpengalaman dalam melakukan perjalanan travel lebih dari 8 tahun. Dengan unit
+                mobil dan bus yang berbagai macam.
             </p>
             <p>
-
+                Biasanya, Saffana Trans fokus mengantar penumpang ke Bandara, Stasiun, dan Pelabuhan. Dengan tarif travel
+                yang tergolong murah, yaitu mulai dari Rp150.000. Degan harga segitu, anda sangat hemat dan kantong jadi
+                aman. Selain itu, anda bisa menegosiasikan harga kepada admin melalui kontak whatsapp.
             </p>
+            <p>
+                Jika anda sudah memesan, maka anda akan diberikan nota pembayaran berupa pdf online. Anda pakai pdf tersebut
+                sebagai syarat masuk bus kami.
+            </p>
+            <p>Berikut detail dari Agen Saffana Trans:</p>
             {{-- TABLE --}}
             <div class="relative rounded-xl overflow-auto">
                 <div class="shadow-sm overflow-x-auto my-4">
@@ -228,6 +240,61 @@
                     </table>
                 </div>
             </div>
+
+            {{-- H3 Mumpuni Trans Java --}}
+            <h3>Mumpuni Trans Java</h3>
+            {{-- TABLE --}}
+            <div class="relative rounded-xl overflow-auto">
+                <div class="shadow-sm overflow-x-auto my-4">
+                    <table class="border-collapse table-auto w-full">
+                        <thead class="bg-white">
+                            <tr
+                                class=" [&_th]:border-b [&_th]:font-medium [&_th]:whitespace-nowrap [&_th]:p-4 [&_th]:pb-3 [&_th]:text-slate-700 [&_th]:w-1/2">
+                                <th class="!pl-8">Nama</th>
+                                <th class="!pr-8 !font-bold">Mumpuni Trans Java</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Alamat</td>
+                                <td class="pr-8">Surabaya, Jawa Timur.
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Whatsapp</td>
+                                <td class="pr-8">0823-8006-3148</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Telepon</td>
+                                <td class="pr-8">0823-8006-3148</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Unit</td>
+                                <td class="pr-8">Tersedia semua unit</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Jadwal</td>
+                                <td class="pr-8">
+                                    Jadwal menyesuaikan situasi, hubungi admin untuk info lebih lanjut
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Harga</td>
+                                <td class="pr-8">Mulai dari Rp125.000</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Fasilitas</td>
+                                <td class="pr-8">Bonus makan dan minum saja</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Layanan Lain</td>
+                                <td class="pr-8">Tidak ada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </x-layouts.article-left>
 
 
