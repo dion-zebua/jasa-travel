@@ -243,6 +243,24 @@
 
             {{-- H3 Mumpuni Trans Java --}}
             <h3>Mumpuni Trans Java</h3>
+            <p>
+                Agen selanjutnya adalah Mumpuni Trans Java. Mumpuni Trans Java setiap hari terus meningkatkan pelayanan dan
+                jangkauan rute. Bekerjasama dengan berbagai travel untuk membantu perjalanan di seluruh Indonesia. Karena
+                kerjasama, maka beberapa rute memiliki harga yang sedikit lebih mahal. Namun jangan khawatir, harga travel
+                sesuai dengan pelayanan yang akan anda dapatkan.
+            </p>
+            <p>
+                Beberapa alasan anda harus memilih Mumpuni Trans Java adalah:
+            </p>
+            <ul>
+                <li>Travel door to door</li>
+                <li>Harga travel terjangkau</li>
+                <li>Mobil nyaman dan lengkap</li>
+                <li>Driver profesional</li>
+                <li>Mobil berangkat 24 jam</li>
+                <li>CS support online 24 jam via whatsapp</li>
+            </ul>
+            <p>Untuk lebih lanjut, berikut detail dari Mumpuni Trans Java:</p>
             {{-- TABLE --}}
             <div class="relative rounded-xl overflow-auto">
                 <div class="shadow-sm overflow-x-auto my-4">
@@ -280,7 +298,7 @@
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Harga</td>
-                                <td class="pr-8">Mulai dari Rp125.000</td>
+                                <td class="pr-8">Mulai dari Rp175.000</td>
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Fasilitas</td>
@@ -294,6 +312,10 @@
                     </table>
                 </div>
             </div>
+
+
+            {{-- H3 HERI TRANS --}}
+            
 
         </x-layouts.article-left>
 
