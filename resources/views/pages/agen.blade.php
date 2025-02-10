@@ -323,8 +323,62 @@
                 pengantaran.
             </p>
             <p>
-                Mereka menawarkan jasa travel reguler dan carter.
+                Mereka menawarkan jasa travel reguler, carter drop dan carter pulang pergi. Jika carter maka anada bisa
+                memilih jadwal perjalanan kapan pun, bahkan anda juga bisa memilih unit yang mau anda pakai. Untuk lebih
+                detail silahkan hubungi mereka di bawah ini:
             </p>
+            {{-- TABLE --}}
+            <div class="relative rounded-xl overflow-auto">
+                <div class="shadow-sm overflow-x-auto my-4">
+                    <table class="border-collapse table-auto w-full">
+                        <thead class="bg-white">
+                            <tr
+                                class=" [&_th]:border-b [&_th]:font-medium [&_th]:whitespace-nowrap [&_th]:p-4 [&_th]:pb-3 [&_th]:text-slate-700 [&_th]:w-1/2">
+                                <th class="!pl-8">Nama</th>
+                                <th class="!pr-8 !font-bold">Heri Trans</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Alamat</td>
+                                <td class="pr-8">Banjaranyar, Kec. Sokaraja, Kab. Banyumas, Jawa Tengah.
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Whatsapp</td>
+                                <td class="pr-8">0895-1970-1457</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Telepon</td>
+                                <td class="pr-8">0895-1970-1457</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Unit</td>
+                                <td class="pr-8">Tersedia semua unit</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Jadwal</td>
+                                <td class="pr-8">
+                                    Jadwal menyesuaikan situasi, hubungi admin untuk info lebih lanjut
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Harga</td>
+                                <td class="pr-8">Mulai dari Rp175.000</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Fasilitas</td>
+                                <td class="pr-8">Bonus makan dan minum saja</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Layanan Lain</td>
+                                <td class="pr-8">Tidak ada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
 
         </x-layouts.article-left>
 
