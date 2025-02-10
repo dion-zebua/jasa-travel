@@ -315,7 +315,16 @@
 
 
             {{-- H3 HERI TRANS --}}
-            
+            <h3>Heri Trans</h3>
+            <p>
+                Agen selanjutnya adalah Heri Trans. <a href="https://heritrans.com" target="_blank">Heri Trans</a> sangat
+                rekomendasi untuk perjalanan di daerah seluruh Pulau Jawa dan Pulau Bali. Armada travel semua terawat dengan
+                baik, driver sangat profesinal dan berpengalaman, dan kami selalu tepat waktu dalam penjemputan dan
+                pengantaran.
+            </p>
+            <p>
+                Mereka menawarkan jasa travel reguler dan carter.
+            </p>
 
         </x-layouts.article-left>
 
