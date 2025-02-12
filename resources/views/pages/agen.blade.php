@@ -383,6 +383,12 @@
                 </div>
             </div>
 
+            {{-- H3 STEFFY TRANS --}}
+            <h3>Steffy Trans</h3>
+            <p>Travel antar kota sangat beresiko jika memilih agen dengan asal-asalan. Pastikan anda memilih yang jelas
+                alamatnya dan telah berpengalaman. Bisa juga dengan menanyakan kepada sanak saudara atau kerabat. Atau
+                tanyakan langsung kepada kami, pada nomor <a href="{{ whatsapp() }}">{{ phone() }}</a></p>. Kami siap memberikan rekomendasi kepada anda.
+
 
         </x-layouts.article-left>
 
