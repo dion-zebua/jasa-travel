@@ -359,20 +359,24 @@
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Jadwal</td>
                                 <td class="pr-8">
-                                    Jadwal menyesuaikan situasi, hubungi admin untuk info lebih lanjut
+                                    <ul>
+                                        <li>08:00 WIB</li>
+                                        <li>15:00 WIB</li>
+                                        <li>21:00 WIB</li>
+                                    </ul>
                                 </td>
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Harga</td>
-                                <td class="pr-8">Mulai dari Rp175.000</td>
+                                <td class="pr-8">Mulai dari Rp150.000</td>
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Fasilitas</td>
-                                <td class="pr-8">Bonus makan dan minum saja</td>
+                                <td class="pr-8">Mobil ber-ac, makan, dan cindramata</td>
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Layanan Lain</td>
-                                <td class="pr-8">Tidak ada</td>
+                                <td class="pr-8">Carter Drop dan Carter PP</td>
                             </tr>
                         </tbody>
                     </table>
