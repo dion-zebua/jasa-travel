@@ -387,7 +387,81 @@
             <h3>Steffy Trans</h3>
             <p>Travel antar kota sangat beresiko jika memilih agen dengan asal-asalan. Pastikan anda memilih yang jelas
                 alamatnya dan telah berpengalaman. Bisa juga dengan menanyakan kepada sanak saudara atau kerabat. Atau
-                tanyakan langsung kepada kami, pada nomor <a href="{{ whatsapp() }}">{{ phone() }}</a></p>. Kami siap memberikan rekomendasi kepada anda.
+                tanyakan langsung kepada kami, pada nomor <a href="{{ whatsapp() }}">{{ phone() }}</a>. Kami
+                siap memberikan rekomendasi kepada anda.
+            </p>
+            @php
+                $tanggal = \Carbon\Carbon::create(2020, 12, 25);
+                $sekarang = \Carbon\Carbon::now();
+
+                $selisihHari = $sekarang->diffInDays($tanggal);
+
+            @endphp
+            <p>
+                <a href="https://steffy-trans.com/">Steffy Trans</a> adalah solusi perjalanan terbaik anda di Jawa Tengah.
+                Menjadikan kenyamanan sebagai prioritas mereka. Steffy Trans telah mengantarkan lebih dari
+                {{ 5000 + 2 * $selisihHari }} penumpang sejak {{ $tanggal->isoFormat('D MMMM YYYY') }}. Dilansir dari web
+                Steffy Trans, terlihat beberapa penumpang meresa sangat puas dengan pelayanan Steffy Trans. Untuk itu
+                buktikan sendiri dengan memesan travel pada Steffy Trans.
+            </p>
+            <p>
+                Berikut detail agen Steffy Trans:
+            </p>
+            {{-- TABLE --}}
+            <div class="relative rounded-xl overflow-auto">
+                <div class="shadow-sm overflow-x-auto my-4">
+                    <table class="border-collapse table-auto w-full">
+                        <thead class="bg-white">
+                            <tr
+                                class=" [&_th]:border-b [&_th]:font-medium [&_th]:whitespace-nowrap [&_th]:p-4 [&_th]:pb-3 [&_th]:text-slate-700 [&_th]:w-1/2">
+                                <th class="!pl-8">Nama</th>
+                                <th class="!pr-8 !font-bold">Steffy Trans</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Alamat</td>
+                                <td class="pr-8">Banjaranyar, Banyumas Regency, Central Java
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Whatsapp</td>
+                                <td class="pr-8">0882-2174-7040</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Telepon</td>
+                                <td class="pr-8">0882-2174-7040</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Unit</td>
+                                <td class="pr-8">Tersedia semua unit</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Jadwal</td>
+                                <td class="pr-8">
+                                    <ul>
+                                        <li>08:00 WIB</li>
+                                        <li>15:00 WIB</li>
+                                        <li>21:00 WIB</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Harga</td>
+                                <td class="pr-8">Mulai dari Rp150.000</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Fasilitas</td>
+                                <td class="pr-8">Mobil ber-ac, makan, dan cindramata</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Layanan Lain</td>
+                                <td class="pr-8">Carter Drop dan Carter PP</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
 
         </x-layouts.article-left>
