@@ -30,7 +30,7 @@
                 Berikut daftar agen travel yang kami rekomendasikan:
             </p>
 
-            <h3>{{ env('APP_NAME') }}</h3>
+            <h3 class="list-agent">{{ env('APP_NAME') }}</h3>
             <p>Agen yang pertama adalah <a href="{{ route('beranda') }}">{{ env('APP_NAME') }}</a>. {{ env('APP_NAME') }}
                 kini menawarkan jasa travel reguler seluruh indonesia. Pada website resmi kami, anda bisa mencari rute
                 dari
@@ -96,7 +96,7 @@
             </div>
 
             {{-- H3 SL TWIN TRANS TRAVEL --}}
-            <h3>SL Twin Trans Travel</h3>
+            <h3 class="list-agent">SL Twin Trans Travel</h3>
             <p>
                 Yang kedua adalah <a href="https://www.sltwintranstravel.my.id/" target="_blank">SL Twin Trans
                     Travel</a>,
@@ -168,7 +168,7 @@
             </div>
 
             {{-- H3 Saffana Trans --}}
-            <h3>Saffana Trans</h3>
+            <h3 class="list-agent">Saffana Trans</h3>
             <p>
                 Selanjutnya Agen Saffana Trans dari Semarang. <a href="https://saffana-trans.web.id/"
                     target="_blank">Saffana Trans</a> sangat rekomendasi untuk perjalanan travel, baik dalam kota maupun
@@ -242,7 +242,7 @@
             </div>
 
             {{-- H3 Mumpuni Trans Java --}}
-            <h3>Mumpuni Trans Java</h3>
+            <h3 class="list-agent">Mumpuni Trans Java</h3>
             <p>
                 Agen selanjutnya adalah Mumpuni Trans Java. Mumpuni Trans Java setiap hari terus meningkatkan pelayanan dan
                 jangkauan rute. Bekerjasama dengan berbagai travel untuk membantu perjalanan di seluruh Indonesia. Karena
@@ -315,7 +315,7 @@
 
 
             {{-- H3 HERI TRANS --}}
-            <h3>Heri Trans</h3>
+            <h3 class="list-agent">Heri Trans</h3>
             <p>
                 Agen selanjutnya adalah Heri Trans. <a href="https://heritrans.com" target="_blank">Heri Trans</a> sangat
                 rekomendasi untuk perjalanan di daerah seluruh Pulau Jawa dan Pulau Bali. Armada travel semua terawat dengan
@@ -384,7 +384,7 @@
             </div>
 
             {{-- H3 STEFFY TRANS --}}
-            <h3>Steffy Trans</h3>
+            <h3 class="list-agent">Steffy Trans</h3>
             <p>Travel antar kota sangat beresiko jika memilih agen dengan asal-asalan. Pastikan anda memilih yang jelas
                 alamatnya dan telah berpengalaman. Bisa juga dengan menanyakan kepada sanak saudara atau kerabat. Atau
                 tanyakan langsung kepada kami, pada nomor <a href="{{ whatsapp() }}">{{ phone() }}</a>. Kami
@@ -440,23 +440,25 @@
                                 <td class="!pl-8">Jadwal</td>
                                 <td class="pr-8">
                                     <ul>
-                                        <li>08:00 WIB</li>
+                                        <li>04:00 WIB</li>
+                                        <li>10:00 WIB</li>
                                         <li>15:00 WIB</li>
+                                        <li>19:00 WIB</li>
                                         <li>21:00 WIB</li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Harga</td>
-                                <td class="pr-8">Mulai dari Rp150.000</td>
+                                <td class="pr-8">Mulai dari Rp100.000</td>
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Fasilitas</td>
-                                <td class="pr-8">Mobil ber-ac, makan, dan cindramata</td>
+                                <td class="pr-8">Bonus makan dan minum</td>
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Layanan Lain</td>
-                                <td class="pr-8">Carter Drop dan Carter PP</td>
+                                <td class="pr-8">Carter Drop, Carter PP, City Tour, dan Kirim Paket</td>
                             </tr>
                         </tbody>
                     </table>

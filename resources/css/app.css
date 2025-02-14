@@ -15,6 +15,9 @@
         & h2 {
             @apply my-2;
         }
+        & h3.list-agent {
+            @apply bg-slate-200 pl-5 py-3 mb-5 mt-10 border-l-4 border-blue-600;
+        }
         & h2,
         & h3 {
             @apply text-left font-bold;
