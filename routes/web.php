@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\ThumbnailController;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\App;
@@ -42,4 +43,9 @@ Route::controller(LandingPageController::class)->group(function () {
         Route::get('/', 'agenTravel')->name('agen-travel');
         Route::get('/thumbnail.jpg', 'agenTravel')->name('thumbnail-agen-travel');
     });
+});
+
+
+Route::controller(SitemapController::class)->group(function () {
+    Route::get('/sitemap.xml', 'static_page');
 });
