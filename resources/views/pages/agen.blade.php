@@ -57,7 +57,7 @@
                         <tbody class="bg-white">
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Alamat</td>
-                                <td class="pr-8">Tersedia diseluruh kecamatan, kabupaten, kota, dan provinsi di
+                                <td class="pr-8">Tersedia di seluruh kecamatan, kabupaten, kota, dan provinsi di
                                     indonesia
                                 </td>
                             </tr>
@@ -71,7 +71,7 @@
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Unit</td>
-                                <td class="pr-8">Xennia, Luxio, Innova Reborn, Fortuner, dan Hiace</td>
+                                <td class="pr-8">Xenia, Luxio, Innova Reborn, Fortuner, dan Hiace</td>
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Jadwal</td>
@@ -170,14 +170,14 @@
             {{-- H3 Saffana Trans --}}
             <h3 class="list-agent">Saffana Trans</h3>
             <p>
-                Selanjutnya Agen Saffana Trans dari Semarang. <a href="https://saffana-trans.web.id/"
+                Selanjutnya {{ $page }} adalah Saffana Trans dari Semarang. <a href="https://saffana-trans.web.id/"
                     target="_blank">Saffana Trans</a> sangat rekomendasi untuk perjalanan travel, baik dalam kota maupun
                 keluar kota. Mereka telah berpengalaman dalam melakukan perjalanan travel lebih dari 8 tahun. Dengan unit
                 mobil dan bus yang berbagai macam.
             </p>
             <p>
                 Biasanya, Saffana Trans fokus mengantar penumpang ke Bandara, Stasiun, dan Pelabuhan. Dengan tarif travel
-                yang tergolong murah, yaitu mulai dari Rp150.000. Degan harga segitu, anda sangat hemat dan kantong jadi
+                yang tergolong murah, yaitu mulai dari Rp150.000. Dengan harga segitu, anda sangat hemat dan kantong jadi
                 aman. Selain itu, anda bisa menegosiasikan harga kepada admin melalui kontak whatsapp.
             </p>
             <p>
@@ -250,7 +250,7 @@
                 sesuai dengan pelayanan yang akan anda dapatkan.
             </p>
             <p>
-                Beberapa alasan anda harus memilih Mumpuni Trans Java adalah:
+                Beberapa alasan anda harus memilih Mumpuni Trans Java sebagai {{ $page }} adalah:
             </p>
             <ul>
                 <li>Travel door to door</li>
@@ -317,14 +317,15 @@
             {{-- H3 HERI TRANS --}}
             <h3 class="list-agent">Heri Trans</h3>
             <p>
-                Agen selanjutnya adalah Heri Trans. <a href="https://heritrans.com" target="_blank">Heri Trans</a> sangat
+                {{ $page }} selanjutnya adalah Heri Trans. <a href="https://heritrans.com" target="_blank">Heri
+                    Trans</a> sangat
                 rekomendasi untuk perjalanan di daerah seluruh Pulau Jawa dan Pulau Bali. Armada travel semua terawat dengan
-                baik, driver sangat profesinal dan berpengalaman, dan kami selalu tepat waktu dalam penjemputan dan
+                baik, driver sangat profesional dan berpengalaman, dan kami selalu tepat waktu dalam penjemputan dan
                 pengantaran.
             </p>
             <p>
-                Mereka menawarkan jasa travel reguler, carter drop dan carter pulang pergi. Jika carter maka anada bisa
-                memilih jadwal perjalanan kapan pun, bahkan anda juga bisa memilih unit yang mau anda pakai. Untuk lebih
+                Mereka menawarkan jasa travel reguler, carter drop dan carter pulang pergi. Jika carter maka anda bisa
+                memilih jadwal perjalanan kapanpun, bahkan anda juga bisa memilih unit yang mau anda pakai. Untuk lebih
                 detail silahkan hubungi mereka di bawah ini:
             </p>
             {{-- TABLE --}}
@@ -372,7 +373,7 @@
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Fasilitas</td>
-                                <td class="pr-8">Mobil ber-ac, makan, dan cindramata</td>
+                                <td class="pr-8">Mobil ber-ac, makan, dan cinderamata</td>
                             </tr>
                             <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
                                 <td class="!pl-8">Layanan Lain</td>
@@ -398,10 +399,11 @@
 
             @endphp
             <p>
-                <a href="https://steffy-trans.com/">Steffy Trans</a> adalah solusi perjalanan terbaik anda di Jawa Tengah.
+                <a href="https://steffy-trans.com/">Steffy Trans</a> adalah {{ $page }} terbaik, solusi perjalanan
+                terbaik anda di Jawa Tengah.
                 Menjadikan kenyamanan sebagai prioritas mereka. Steffy Trans telah mengantarkan lebih dari
                 {{ 5000 + 2 * $selisihHari }} penumpang sejak {{ $tanggal->isoFormat('D MMMM YYYY') }}. Dilansir dari web
-                Steffy Trans, terlihat beberapa penumpang meresa sangat puas dengan pelayanan Steffy Trans. Untuk itu
+                Steffy Trans, terlihat beberapa penumpang mereka sangat puas dengan pelayanan Steffy Trans. Untuk itu
                 buktikan sendiri dengan memesan travel pada Steffy Trans.
             </p>
             <p>
@@ -468,7 +470,92 @@
             {{-- H3  BANG AHMAD TRAVEL --}}
             <h3 class="list-agent">Bang Ahmad Travel</h3>
             <p>
-                Agen travel selanjutnya adalah <a href="https://bangahmadtravel.id/">Bang Ahmad Travel</a> dari Cilacap.
+                {{ $page }} selanjutnya adalah <a href="https://bangahmadtravel.id/">Bang Ahmad Travel</a> dari
+                Cilacap.
+                Harga yang ditawarkan mulai dari Rp200.000, harga bersaing namun sesuai dengan kualitas pelayanan yang
+                diberikan. Selama perjalanan anda akan mendapatkan bonus makan dan minuman selama perjalanan. Selain itu
+                anda akan dijemput dan diantar ke lokasi yang anda tentukan tanpa biaya tambahan.
+            </p>
+            <p>Berikut detail profil dari Bang Ahmad Travel:</p>
+            {{-- TABLE --}}
+            <div class="relative rounded-xl overflow-auto">
+                <div class="shadow-sm overflow-x-auto my-4">
+                    <table class="border-collapse table-auto w-full">
+                        <thead class="bg-white">
+                            <tr
+                                class=" [&_th]:border-b [&_th]:font-medium [&_th]:whitespace-nowrap [&_th]:p-4 [&_th]:pb-3 [&_th]:text-slate-700 [&_th]:w-1/2">
+                                <th class="!pl-8">Nama</th>
+                                <th class="!pr-8 !font-bold">Bang Ahmad Travel</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Alamat</td>
+                                <td class="pr-8">
+                                    <ul>
+                                        <li>Jl. Rambutan, Rt/Rw 03/10, Penggalang Kec. Adipala, Cilacap</li>
+                                        <li>Jl. H. Yasin No. 10A Rt/Rw 02/03, Gunungreja, Kec. Sidareja, Cilacap</li>
+                                        <li>Sumber Kulon, Tegalrejo, Kec. Poncowarno, Kebumen</li>
+                                        <li>Lk. Kunden Barat, Rw 01, Kunden Barat Kunden, Kec. Wirosari, Kab. Grobogan</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Whatsapp</td>
+                                <td class="pr-8">0812-2513-5413</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Telepon</td>
+                                <td class="pr-8">0812-2513-5413</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Unit</td>
+                                <td class="pr-8">
+                                    <ul>
+                                        <li>Avanza</li>
+                                        <li>Luxio</li>
+                                        <li>Hiace Reborn</li>
+                                        <li>Dan masih banyak lagi</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Jadwal</td>
+                                <td class="pr-8">
+                                    <ul>
+                                        <li>09:00 WIB</li>
+                                        <li>14:00 WIB</li>
+                                        <li>19:00 WIB</li>
+                                        <li>20:00 WIB</li>
+                                        <li>21:00 WIB</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Harga</td>
+                                <td class="pr-8">Mulai dari Rp200.000</td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Fasilitas</td>
+                                <td class="pr-8">
+                                    <li>Harga Tiket Murah</li>
+                                    <li>Mobil ber-AC</li>
+                                    <li>Via Tol Penuh</li>
+                                    <li>Free Makan</li>
+                                    <li>Door to Door</li>
+                                    <li>Siap 24 Jam</li>
+                                </td>
+                            </tr>
+                            <tr class="[&_td]:border-b [&_td]:border-slate-200 [&_td]:p-4 [&_td]:text-slate-500">
+                                <td class="!pl-8">Layanan Lain</td>
+                                <td class="pr-8">Carter Drop, Ziarah / Wisata Religi, City Tour, dan Kirim Dokumen</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p>Pastikan anda memilih agen dengan benar, hubungi kami untuk mendapatkan informasi terkait
+                <strong>{{ $page }}</strong>.
             </p>
 
 
