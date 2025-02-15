@@ -159,8 +159,8 @@ class LandingPageController extends Controller
 
         return view('pages.agen', [
             'page' => $page,
-            'title' => Str::title("8 $page Murah " . date('Y')),
-            'desc' => Str::title("8 Rekomendasi $page Profesional Terbaik No. 1 di tahun " . date('Y') . " dengan harga murah"),
+            'title' => Str::title("7 $page Murah " . date('Y')),
+            'desc' => Str::title("7 Rekomendasi $page Profesional Terbaik No. 1 di tahun " . date('Y') . " dengan harga murah"),
             'agent' => $asalRes,
             'thumbnail' => route('thumbnail-agen-travel', ['asal' => Str::slug($asalRes->name), 'asalId' => $asalRes->code]),
         ]);

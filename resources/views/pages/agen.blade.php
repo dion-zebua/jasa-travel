@@ -465,8 +465,11 @@
                 </div>
             </div>
 
-            {{-- H3 --}}
-            <h3 class="list-agent"></h3>
+            {{-- H3  BANG AHMAD TRAVEL --}}
+            <h3 class="list-agent">Bang Ahmad Travel</h3>
+            <p>
+                Agen travel selanjutnya adalah <a href="https://bangahmadtravel.id/">Bang Ahmad Travel</a> dari Cilacap.
+            </p>
 
 
         </x-layouts.article-left>
