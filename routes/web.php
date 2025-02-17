@@ -47,8 +47,8 @@ Route::controller(LandingPageController::class)->group(function () {
 
 
 Route::controller(SitemapController::class)->group(function () {
-    Route::get('/sitemap.xml', 'static_page');
+    Route::get('/sitemap.xml', 'static_sitemap');
     Route::get('/agen-sitemap.xml', 'agen_sitemap')->name('agen-sitemap');
-    Route::get('/travel-sitemap.xml', 'travel_page')->name('travel-sitemap');
-    Route::get('/{asal}/{asalId}/single-travel-sitemap.xml', 'single_travel_page')->name('single-travel-sitemap');
+    Route::get('/travel-sitemap.xml', 'travel_sitemap')->name('travel-sitemap');
+    Route::get('/{asal}/{asalId}/single-travel-sitemap.xml', 'single_travel_sitemap')->name('single-travel-sitemap');
 });

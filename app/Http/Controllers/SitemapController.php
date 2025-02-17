@@ -20,7 +20,7 @@ class SitemapController extends Controller
         return $data;
     }
 
-    public function static_page()
+    public function static_sitemap()
     {
 
         $data = [
@@ -54,7 +54,7 @@ class SitemapController extends Controller
     }
 
 
-    public function travel_page()
+    public function travel_sitemap()
     {
         $data = $this->all_data();
 
@@ -70,7 +70,7 @@ class SitemapController extends Controller
         ]);
     }
 
-    public function single_travel_page($asal, $asalId)
+    public function single_travel_sitemap($asal, $asalId)
     {
 
         $data = $this->all_data();
