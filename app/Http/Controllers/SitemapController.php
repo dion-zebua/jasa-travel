@@ -70,5 +70,24 @@ class SitemapController extends Controller
         ]);
     }
 
-    public function
+    public function single_travel_page($asal, $asalId)
+    {
+
+        $data = $this->all_data();
+
+        $res = $data->map(function ($item) use ($asal, $asalId) {
+            if ($asalId != $item->code) {
+                return route('jalur-rute-travel', [
+                    'asal' => $asal,
+                    'asalId' => $asalId,
+                    'tujuan' => Str::slug($item->name),
+                    'tujuanId' => $item->code,
+                ]);
+            }
+        });
+
+        return view('pages.sitemap', [
+            'data' => $res,
+        ]);
+    }
 }
