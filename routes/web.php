@@ -50,4 +50,5 @@ Route::controller(SitemapController::class)->group(function () {
     Route::get('/sitemap.xml', 'static_page');
     Route::get('/agen-sitemap.xml', 'agen_sitemap')->name('agen-sitemap');
     Route::get('/travel-sitemap.xml', 'travel_page')->name('travel-sitemap');
+    Route::get('/{asal}/{asalId}/single-travel-sitemap.xml', 'single_travel_page')->name('single-travel-sitemap');
 });

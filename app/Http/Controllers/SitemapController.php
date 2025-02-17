@@ -10,6 +10,16 @@ use Laravolt\Indonesia\Models\Province;
 
 class SitemapController extends Controller
 {
+    public function all_data()
+    {
+        $province = collect(Province::all());
+        $city = collect(City::all());
+        $district = collect(District::all());
+        $data = $province->merge($city)->merge($district);
+
+        return $data;
+    }
+
     public function static_page()
     {
 
@@ -28,11 +38,8 @@ class SitemapController extends Controller
 
     public function agen_sitemap()
     {
+        $data = $this->all_data();
 
-        $province = collect(Province::all());
-        $city = collect(City::all());
-        $district = collect(District::all());
-        $data = $province->merge($city)->merge($district);
         $res = $data->map(function ($item) {
             return route('agen-travel', [
                 'asal' => Str::slug($item->name),
@@ -47,7 +54,21 @@ class SitemapController extends Controller
     }
 
 
-    public function travel_page() {
-        
+    public function travel_page()
+    {
+        $data = $this->all_data();
+
+        $res = $data->map(function ($item) {
+            return route('single-travel-sitemap', [
+                'asal' => Str::slug($item->name),
+                'asalId' => $item->code,
+            ]);
+        });
+
+        return view('pages.sitemap', [
+            'data' => $res,
+        ]);
     }
+
+    public function
 }
