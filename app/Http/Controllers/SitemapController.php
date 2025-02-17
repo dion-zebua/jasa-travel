@@ -75,15 +75,15 @@ class SitemapController extends Controller
 
         $data = $this->all_data();
 
-        $res = $data->map(function ($item) use ($asal, $asalId) {
-            if ($asalId != $item->code) {
-                return route('jalur-rute-travel', [
-                    'asal' => $asal,
-                    'asalId' => $asalId,
-                    'tujuan' => Str::slug($item->name),
-                    'tujuanId' => $item->code,
-                ]);
-            }
+        $res = $data->filter(function ($item) use ($asalId) {
+            return $asalId != $item->code;
+        })->values()->map(function ($item) use ($asal, $asalId) {
+            return route('jalur-rute-travel', [
+                'asal' => $asal,
+                'asalId' => $asalId,
+                'tujuan' => Str::slug($item->name),
+                'tujuanId' => $item->code,
+            ]);
         });
 
         return view('pages.sitemap', [
