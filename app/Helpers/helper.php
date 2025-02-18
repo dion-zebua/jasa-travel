@@ -25,6 +25,6 @@ if (! function_exists('whatsapp')) {
     function whatsapp()
     {
         $cleaned_number = str_replace(['-', '+', ' '], '', phone());
-        return "https://api.whatsapp.com/send/?phone=" . $cleaned_number . "&text=Halo+admin+" . url()->full() . "&type=phone_number&app_absent=0";
+        return "https://api.whatsapp.com/send/?phone=" . $cleaned_number . "&text=Halo+admin+" . request()->fullUrl() . "&type=phone_number&app_absent=0";
     }
 }
