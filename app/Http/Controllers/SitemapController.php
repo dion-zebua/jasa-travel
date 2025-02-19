@@ -20,6 +20,21 @@ class SitemapController extends Controller
         return $data;
     }
 
+    public function xml($data)
+    {
+        $xml = new \SimpleXMLElement('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
+
+        foreach ($data as $url) {
+            $urlElement = $xml->addChild('url');
+            $urlElement->addChild('loc', $url);
+        }
+
+        $xmlString = $xml->asXML();
+
+        return response($xmlString, 200)
+            ->header('Content-Type', 'application/xml');
+    }
+
     public function static_sitemap()
     {
 
@@ -31,9 +46,7 @@ class SitemapController extends Controller
             route('agen-sitemap'),
         ];
 
-        return view('pages.sitemap', [
-            'data' => $data,
-        ]);
+        return $this->xml($data);
     }
 
     public function agen_sitemap()
@@ -48,9 +61,7 @@ class SitemapController extends Controller
         });
 
 
-        return view('pages.sitemap', [
-            'data' => $res,
-        ]);
+        return $this->xml($res);
     }
 
 
@@ -65,9 +76,7 @@ class SitemapController extends Controller
             ]);
         });
 
-        return view('pages.sitemap', [
-            'data' => $res,
-        ]);
+        return $this->xml($res);
     }
 
     public function single_travel_sitemap($asal, $asalId)
@@ -86,8 +95,6 @@ class SitemapController extends Controller
             ]);
         });
 
-        return view('pages.sitemap', [
-            'data' => $res,
-        ]);
+        return $this->xml($res);
     }
 }

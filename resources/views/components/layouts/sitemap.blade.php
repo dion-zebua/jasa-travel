@@ -41,7 +41,7 @@
 
 <body>
     <h1>Sitemap</h1>
-    <p>Sitemap ini memiliki {{ $data->count() ?? 0 }} URL</p>
+    <p>Sitemap ini memiliki {{ count($data) ?? 0 }} URL</p>
     <div class="">
         <table>
             <thead>
