@@ -128,10 +128,10 @@ class LandingPageController extends Controller
         $page = Str::title("Travel $asalRes->name $tujuanRes->name");
 
         $province = Province::whereNotIn('code', [$asalId, $tujuanId])->limit(5)->inRandomOrder()->get();
-        $city = City::whereNotIn('code', [$asalId, $tujuanId])->limit(4)->inRandomOrder()->get();
-        $district = District::whereNotIn('code', [$asalId, $tujuanId])->limit(3)->inRandomOrder()->get();
-        $recommendation = $province->merge($city)->merge($district)->shuffle()->take(6);
-        $recommendation->splice(3, 0, [$asalRes]);
+        $city = City::whereNotIn('code', [$asalId, $tujuanId])->limit(8)->inRandomOrder()->get();
+        $district = District::whereNotIn('code', [$asalId, $tujuanId])->limit(12)->inRandomOrder()->get();
+        $recommendation = $province->merge($city)->merge($district)->shuffle()->take(9);
+        $recommendation->splice(5, 0, [$asalRes]);
 
         return view('pages.travel', [
             'page' => $page,

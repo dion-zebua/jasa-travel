@@ -132,8 +132,9 @@
             <p>Ada beberapa rute travel yang kami rekomendasikan untuk anda, dan mungkin anda tertarik:</p>
             <ul>
                 @foreach ($recommendation as $item)
-                    <li><a
-                            href="">{{ Str::title('Travel ' . ($loop->index < 3 ? $travel[0]->name : $travel[1]->name) . ' ' . $item->name) }}</a>
+                    <li>
+                        <a
+                            href="{{ route('jalur-rute-travel', ['asal' => Str::slug($loop->index < 5 ? $travel[0]->name : $travel[1]->name), 'tujuan' => Str::slug($item['name']), 'asalId' => $loop->index < 5 ? $travel[0]->code : $travel[1]->code, 'tujuanId' => $item['code']]) }}">{{ Str::title('Travel ' . ($loop->index < 5 ? $travel[0]->name : $travel[1]->name) . ' ' . $item->name) }}</a>
                     </li>
                 @endforeach
             </ul>
