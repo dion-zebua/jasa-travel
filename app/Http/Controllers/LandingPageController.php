@@ -146,7 +146,6 @@ class LandingPageController extends Controller
     public function agenTravel($asal, $asalId)
     {
         $asalRes = $this->checkCode($asalId);
-
         if (Str::slug($asalRes->name) != $asal) {
             abort(404);
         }
@@ -172,7 +171,7 @@ class LandingPageController extends Controller
         // $name = Str::slug($name);
         if ($code <= 92) {
             $res = Province::where('code', $code)->firstOrFail();
-        } elseif ($code <= 9271) {
+        } elseif ($code <= 110101) {
             $res = City::where('code', $code)->firstOrFail();
         } else {
             $res = District::where('code', $code)->firstOrFail();
