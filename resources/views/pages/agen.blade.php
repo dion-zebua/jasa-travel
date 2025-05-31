@@ -244,7 +244,8 @@
             {{-- H3 Mumpuni Trans Java --}}
             <h3 class="list-agent">Mumpuni Trans Java</h3>
             <p>
-                Agen selanjutnya adalah Mumpuni Trans Java. Mumpuni Trans Java setiap hari terus meningkatkan pelayanan dan
+                Agen selanjutnya adalah <a href="https://mumpunitransjava.com/" target="_blank">Mumpuni Trans Java</a>.
+                Mumpuni Trans Java setiap hari terus meningkatkan pelayanan dan
                 jangkauan rute. Bekerjasama dengan berbagai travel untuk membantu perjalanan di seluruh Indonesia. Karena
                 kerjasama, maka beberapa rute memiliki harga yang sedikit lebih mahal. Namun jangan khawatir, harga travel
                 sesuai dengan pelayanan yang akan anda dapatkan.

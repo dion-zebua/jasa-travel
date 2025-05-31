@@ -1,4 +1,4 @@
-<form method="POST" action={{ route('cari-agen') }} id="cari-agen"
+<form method="POST" action={{ route('cari-agen') }} id="cari-agen" target="_blank"
     class="w-full max-w-[400px] sm:max-w-[550px] border border-gray-300 px-4 py-5 md:p-6 grid grid-cols-1 !gap-6 bg-white shadow-lg rounded-lg search">
     @method('POST')
     @csrf

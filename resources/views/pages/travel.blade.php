@@ -197,7 +197,7 @@
                 <li>{{ Str::title($travel[0]->name) }}
                     <ul class="!list-decimal">
                         <li>{{ env('APP_NAME') }} (kami)</li>
-                        <li>Pahala Pelita Travel</li>
+                        <li><a href="https://mumpunitransjava.com/" target="_blank">Mumpuni Trans Java</a></li>
                         <li>Seraya Trans {{ Str::title($travel[0]->name) }}</li>
                         <li>LNT Trans</li>
                         <li>Agung Group Travel</li>
