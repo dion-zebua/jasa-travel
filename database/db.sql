@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Waktu pembuatan: 31 Bulan Mei 2025 pada 15.36
+-- Waktu pembuatan: 12 Agu 2025 pada 15.03
 -- Versi server: 10.11.10-MariaDB
 -- Versi PHP: 7.2.34
 
@@ -7936,10 +7936,10 @@ INSERT INTO `indonesia_provinces` (`id`, `code`, `name`, `meta`, `created_at`, `
 (32, '82', 'MALUKU UTARA', '{\"lat\":\"1.5709993\",\"long\":\"127.8087693\"}', '2025-01-24 10:10:02', '2025-01-24 10:10:02'),
 (33, '91', 'PAPUA', '{\"lat\":\"-4.269928\",\"long\":\"138.0803529\"}', '2025-01-24 10:10:02', '2025-01-24 10:10:02'),
 (34, '92', 'PAPUA BARAT', '{\"lat\":\"-1.3361154\",\"long\":\"133.1747162\"}', '2025-01-24 10:10:02', '2025-01-24 10:10:02'),
-(35, '1', 'Bandara', NULL, NULL, NULL),
-(36, '2', 'Pelabuhan', NULL, NULL, NULL),
-(37, '3', 'Stasiun', NULL, NULL, NULL),
-(38, '4', 'Terminal', NULL, NULL, NULL);
+(35, '41', 'Bandara', NULL, NULL, NULL),
+(36, '42', 'Pelabuhan', NULL, NULL, NULL),
+(37, '43', 'Stasiun', NULL, NULL, NULL),
+(38, '44', 'Terminal', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
