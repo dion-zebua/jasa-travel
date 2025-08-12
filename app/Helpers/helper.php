@@ -50,10 +50,10 @@ if (! function_exists('phone')) {
         // Cek apakah asalId atau tujuanId termasuk wilayah Jawa
         $jawa = $inRange($asalId, $jawaRanges) || $inRange($tujuanId, $jawaRanges);
 
-        if ($sumatra) {
-            return '+62 812-2675-7475';
-        } elseif ($jawa) {
+        if ($jawa) {
             return '+62 899-0704-308';
+        } elseif ($sumatra) {
+            return '+62 812-2675-7475';
         } else {
             return '+62 882-8931-7870';
         }
