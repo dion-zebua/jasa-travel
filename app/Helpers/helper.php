@@ -52,10 +52,10 @@ if (! function_exists('phone')) {
 
         if ($jawa) {
             return '+62 899-0704-308';
-        } elseif ($sumatra) {
-            return '+62 812-2675-7475';
+            // } elseif ($sumatra) {
+            //     return '+62 812-2675-7475';
         } else {
-            return '+62 882-8931-7870';
+            return '+62 859-3283-9714';
         }
     }
 }

@@ -18,6 +18,7 @@ class ThumbnailController extends Controller
             $lines = explode("\n", $wrappedText);
         }
 
+        // title
         foreach ($lines as $key => $item) {
             $image->text($item, [
                 'color' => 'white',
@@ -26,6 +27,15 @@ class ThumbnailController extends Controller
                 'fontFile' => public_path('font/Poppins-Regular.ttf'),
             ]);
         }
+
+        // phone
+        $image->text(phone(), [
+            'color' => 'white',
+            'size' => 42,
+            'yOffset' => 350,
+            'fontFile' => public_path('font/Poppins-Regular.ttf'),
+        ]);
+
         $imageData = $image->toDataUri(null, 15);
 
         return response()->make(file_get_contents($imageData), 200, [
