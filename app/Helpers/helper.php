@@ -44,6 +44,12 @@ if (! function_exists('phone')) {
             [310101, 517104],   // Kecamatan
         ];
 
+        $kalimantanRanges = [
+            [61, 65],           // Provinsi
+            [6101, 6571],       // Kota
+            [610101, 657104],   // Kecamatan
+        ];
+
         // Cek apakah asalId atau tujuanId termasuk wilayah Sumatra
         $sumatra = $inRange($asalId, $sumatraRanges) || $inRange($tujuanId, $sumatraRanges);
 
@@ -54,6 +60,8 @@ if (! function_exists('phone')) {
             return '+62 899-0704-308';
             // } elseif ($sumatra) {
             //     return '+62 812-2675-7475';
+        } elseif ($kalimantanRanges) {
+            return '+62 822-5455-4389';
         } else {
             return '+62 859-3283-9714';
         }
