@@ -140,6 +140,7 @@ class LandingPageController extends Controller
             'travel' => [$asalRes, $tujuanRes],
             'recommendation' => $recommendation,
             'thumbnail' => route('thumbnail-jalur-rute-travel', ['asal' => Str::slug($asalRes['name']), 'tujuan' => Str::slug($tujuanRes['name']), 'asalId' => $asalRes['code'], 'tujuanId' => $tujuanRes['code']]),
+            'productSchema' => true,
         ]);
     }
 
