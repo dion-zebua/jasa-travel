@@ -2,7 +2,29 @@
 <html lang="id">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-0K1KNV8K8K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0K1KNV8K8K');
+    </script> --}}
+
+
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- preload -->
+    <link rel="preload" fetchpriority="high" as="image" href="{{ asset('img/blob.svg') }}" type="image/svg+xml">
+    <link rel="preload" fetchpriority="high" href="{{ asset('font/Poppins-Regular.ttf') }}" as="font"
+        type="font/ttf" crossorigin="anonymous">
+
+
     <style>
         html,
         body {
@@ -15,11 +37,12 @@
             src: url('{{ asset('font/Poppins-Regular.ttf') }}') format('truetype');
             font-weight: 400;
             font-style: normal;
+            font-display: swap;
         }
     </style>
+
     @vite('resources/css/app.css')
     @livewireStyles
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     {{--  --}}
 
@@ -42,7 +65,7 @@
     <link rel="canonical" href="{{ url()->full() }}" />
 
 
-    @if (true)
+    @if (isset($productSchema) && $productSchema)
         @php
             $now = new \DateTime();
             $startOfYear = new \DateTime($now->format('Y') . '-01-01');
@@ -111,9 +134,7 @@
         @endphp
 
         <!-- Product Schema -->
-        <script type="application/ld+json">
-            {!! preg_replace('/\\\/', '', json_encode($dataSchema)) !!}
-        </script>
+        <script type="application/ld+json">{!! preg_replace('/\\\/', '', json_encode($dataSchema)) !!}</script>
     @endif
 
 

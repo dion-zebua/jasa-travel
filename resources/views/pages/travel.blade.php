@@ -219,8 +219,8 @@
             {{-- H2 --}}
             <h2>Tips Melakukan Perjalanan Travel</h2>
             <p>
-                Perjalanan travel pada umumnya sangat jauh dan lama, terutama
-                {{ $page }}. Travel biasanya difokuskan untuk
+                Perjalanan travel pada umumnya sangat jauh dan lama, jadi harus persiapkan sebaik mungkin. Travel biasanya
+                difokuskan untuk
                 perjalanan
                 keluar
                 kota, seperti dari {{ Str::title($travel[0]->name . ' ke ' . $travel[1]->name) }} atau sebaliknya dari

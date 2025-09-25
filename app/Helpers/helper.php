@@ -50,20 +50,30 @@ if (! function_exists('phone')) {
             [610101, 657104],   // Kecamatan
         ];
 
-        $sumatra = $inRange($asalId, $sumatraRanges) || $inRange($tujuanId, $sumatraRanges);
+        $sulawesiRanges = [
+            [71, 76],           // Provinsi
+            [7101, 7606],       // Kota
+            [710105, 760605],   // Kecamatan
+        ];
 
         $jawa = $inRange($asalId, $jawaRanges) || $inRange($tujuanId, $jawaRanges);
 
-        $kalimantan = $inRange($asalId, $kalimantanRanges) && $inRange($tujuanId, $kalimantanRanges);
+        $sumatra = $inRange($asalId, $sumatraRanges) || $inRange($tujuanId, $sumatraRanges);
+
+        $kalimantan = $inRange($asalId, $kalimantanRanges) || $inRange($tujuanId, $kalimantanRanges);
+
+        $sulawesi = $inRange($asalId, $sulawesiRanges) || $inRange($tujuanId, $sulawesiRanges);
 
         if ($jawa) {
             return '+62 899-0704-308';
         } elseif ($sumatra) {
-            return '+62 813-6018-7859';
+            return '+62 812-1156-3500';
         } elseif ($kalimantan) {
-            return '+62 822-5455-4389';
+            return '+62 857-9190-4615';
+        } elseif ($sulawesi) {
+            return '+62 857-0518-0556';
         } else {
-            return '+62 859-3283-9714';
+            return '+62 821-3087-7954';
         }
     }
 }

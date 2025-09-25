@@ -17,7 +17,8 @@
                         d="M28.28,23.688c-0.45-0.224-2.66-1.313-3.071-1.462c-0.413-0.151-0.712-0.224-1.012,0.224	c-0.3,0.45-1.161,1.462-1.423,1.761c-0.262,0.3-0.524,0.337-0.974,0.113c-0.45-0.224-1.899-0.7-3.615-2.231	c-1.337-1.191-2.239-2.663-2.501-3.113c-0.262-0.45-0.029-0.693,0.197-0.917c0.202-0.202,0.45-0.525,0.674-0.787	c0.224-0.262,0.3-0.45,0.45-0.75c0.151-0.3,0.075-0.563-0.038-0.787c-0.113-0.224-1.012-2.437-1.387-3.336	c-0.364-0.876-0.736-0.757-1.012-0.771c-0.262-0.014-0.562-0.015-0.861-0.015c-0.3,0-0.787,0.113-1.198,0.563	c-0.411,0.45-1.573,1.537-1.573,3.749s1.611,4.35,1.835,4.649c0.224,0.3,3.169,4.839,7.68,6.786	c1.072,0.462,1.911,0.739,2.562,0.947c1.076,0.342,2.057,0.294,2.832,0.178c0.864-0.129,2.66-1.087,3.034-2.136	c0.375-1.049,0.375-1.95,0.262-2.136C29.03,24.025,28.731,23.912,28.28,23.688z">
                     </path>
                 </svg>
-                <a class="absolute inset-0" href="{{ whatsapp() }}">
+                <a title="whatsapp" target="_blank" class="absolute inset-0" href="{{ whatsapp() }}">
+                    <span class="hidden">{{ phone() }}</span>
                 </a>
             </div>
         </div>
@@ -49,7 +50,8 @@
 
             <div class="text-center py-5 mt-10 text-sm border-t border-blue-400">
                 Dikembangkan oleh <a class="underline" target="_blank" rel="nofollow noindex"
-                    href="https://{{ developer() }}">{{ developer() }}</a><br>Februari 2025 - {{ \Carbon\Carbon::now()->locale('id')->isoFormat('MMMM YYYY') }}
+                    href="https://{{ developer() }}">{{ developer() }}</a><br>Februari 2025 -
+                {{ \Carbon\Carbon::now()->locale('id')->isoFormat('MMMM YYYY') }}
             </div>
         </div>
     </x-background-blue>

@@ -1,21 +1,63 @@
+# Aktifkan mod_rewrite hanya sekali
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-    </IfModule>
-
     RewriteEngine On
 
-    # Handle Authorization Header
+    # Redirect www ke non-www
+    RewriteCond %{HTTP_HOST} ^www\.jasatravel\.web\.id$ [NC]
+    RewriteRule ^(.*)$ https://jasatravel.web.id/$1 [L,R=301]
+
+    # Handle Authorization Header (untuk Laravel Passport / API Auth)
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-    # Redirect Trailing Slashes If Not A Folder...
+    # Redirect trailing slash jika bukan folder
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
 
-    # Send Requests To Front Controller...
+    # Kirim request ke index.php (Front Controller Laravel)
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+# Non mod_rewrite: Cache-Control Headers
+
+<IfModule mod_headers.c>
+    # Cache HTML 1 jam
+    <FilesMatch "\.(html)$">
+        Header set Cache-Control "max-age=3600, public"
+    </FilesMatch>
+
+    # Cache CSS, JS, gambar, font 1 bulan (lebih baik dari 1 jam)
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|woff2|woff|ttf)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_negotiation.c>
+    Options -MultiViews -Indexes
+</IfModule>
+
+
+# <IfModule mod_rewrite.c>
+#     <IfModule mod_negotiation.c>
+#         Options -MultiViews -Indexes
+#     </IfModule>
+
+#     RewriteEngine On
+
+#     # Handle Authorization Header
+#     RewriteCond %{HTTP:Authorization} .
+#     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+#     # Redirect Trailing Slashes If Not A Folder...
+#     RewriteCond %{REQUEST_FILENAME} !-d
+#     RewriteCond %{REQUEST_URI} (.+)/$
+#     RewriteRule ^ %1 [L,R=301]
+
+#     # Send Requests To Front Controller...
+#     RewriteCond %{REQUEST_FILENAME} !-d
+#     RewriteCond %{REQUEST_FILENAME} !-f
+#     RewriteRule ^ index.php [L]
+# </IfModule>

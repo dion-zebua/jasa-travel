@@ -5,8 +5,8 @@
     <div class="text-center z-[3] px-2">
         <h1 class="!text-white mb-2">{{ config('app.name') . ' Murah ' . date('Y') }}</h1>
         <p class="text-slate-300 mb-7 max-w-[450px]">Temukan kenyamanan dan kemudahan perjalanan dengan layanan
-            travel
-            reguler kami!</p>
+            Jasa Travel
+            reguler terbaik kami!</p>
     </div>
     <div class="w-full !z-[2] px-5">
         <div class="container mx-auto flex justify-center items-center last:[&>*]:hidden">
