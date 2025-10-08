@@ -72,7 +72,7 @@
             $diff = $now->getTimestamp() - $startOfYear->getTimestamp();
             $oneDay = 1000 * 60 * 60 * 24;
 
-            $reviewCount = $now->format('Y') - 2000 + floor($diff / $oneDay) + 1;
+            $reviewCount = $now->format('Y') - 2020 + floor($diff / $oneDay) + 1;
             $ratingValue = $reviewCount % 2 === 0 ? 4.9 : 4.8;
 
             $dataSchema = [
@@ -90,7 +90,7 @@
                     'lowPrice' => 100000,
                     'highPrice' => 250000,
                     'priceCurrency' => 'IDR',
-                    'offerCount' => 10,
+                    'offerCount' => $reviewCount,
                 ],
                 'review' => [
                     '@type' => 'Review',
